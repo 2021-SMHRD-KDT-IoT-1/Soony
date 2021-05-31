@@ -29,8 +29,6 @@ b_like NUMBER(10));
 create sequence b_num 
 start with 1 
 increment by 1
-drop sequence b_num
-insert into f_brd values(b_num.nextval, 'test1','test1','test1',sysdate,9,9);
 
 select * from f_brd
 
@@ -42,7 +40,11 @@ c_username VARCHAR2(100),
 c_date DATE, 
 CONSTRAINT f_brd_cmt_FK_b_num FOREIGN KEY(b_num) REFERENCES f_brd(b_num) ON DELETE CASCADE );
 
-select c_content from f_brd_cmt  where b_num=1
+create sequence c_num 
+start with 1 
+increment by 1
+
+
 
 CREATE TABLE faq ( 
 f_num NUMBER(10) PRIMARY KEY, 
@@ -50,6 +52,10 @@ f_title VARCHAR2(100),
 f_content VARCHAR2(500),
 f_img VARCHAR2(2000));
 
+
+create sequence f_num
+start with 1
+increment by 1
 
 
 CREATE TABLE qna ( 
@@ -61,6 +67,10 @@ q_content VARCHAR2(500),
 q_date DATE );
 
 
+create sequence q_num
+start with 1
+increment by 1
+
 
 CREATE TABLE rqna(
  q_num NUMBER(10),
@@ -71,6 +81,11 @@ CREATE TABLE rqna(
   CONSTRAINT rqna_FK_q_num FOREIGN KEY(q_num)
   REFERENCES qna(q_num) ON DELETE CASCADE
 );
+
+create sequence rq_num
+start with 1
+increment by 1 
+
 
 select*from mbr_info;
 select*from str_cr;
@@ -89,6 +104,12 @@ drop table rqna;
 drop table mbr_info;
 drop table f_brd;
 drop table qna; 
+
+drop sequence b_num
+drop sequence c_num
+drop sequence f_num
+drop sequence q_num
+create sequence rq_num
                              */
 
 
