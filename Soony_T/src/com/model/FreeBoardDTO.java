@@ -8,7 +8,7 @@ public class FreeBoardDTO {
 	private String date;
 	private int view;
 	private int like;
-
+  
 	public FreeBoardDTO(int num, String username, String title, String content, String date, int view, int like) {
 		super();
 		this.num = num;

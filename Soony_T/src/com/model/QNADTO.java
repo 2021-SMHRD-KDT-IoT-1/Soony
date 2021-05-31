@@ -1,7 +1,7 @@
 package com.model;
 
 public class QNADTO {
-
+ 
 	private String num;
 	private String username;
 	private String password;

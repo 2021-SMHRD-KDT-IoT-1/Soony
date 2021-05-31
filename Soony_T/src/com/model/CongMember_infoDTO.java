@@ -4,7 +4,7 @@ public class CongMember_infoDTO {
 
 	private String id;
 	private String pw;
-	private String tel;
+	private String tel; 
 	private String addr;
 	private String email;
 	private String nick;

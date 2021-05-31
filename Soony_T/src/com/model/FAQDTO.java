@@ -1,7 +1,7 @@
 package com.model;
 
-public class FAQDTO {
-	private int num;
+public class FAQDTO { 
+	private int num; 
 	private String title;
 	private String content;
 	private String img;

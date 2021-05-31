@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class FAQDAO {
+public class FAQDAO { 
 
 	Connection conn = null;
 	PreparedStatement psmt = null;

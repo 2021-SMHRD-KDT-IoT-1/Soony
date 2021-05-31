@@ -14,7 +14,7 @@ public class FreeBoardDAO {
 	FreeBoardDTO dto = null;
 	ResultSet rs = null;
 	ArrayList<FreeBoardDTO> list = null;
-
+ 
 	public void conn() {
 
 		try {

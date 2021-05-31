@@ -7,7 +7,7 @@ public class FreeBoardComentDTO {
 	private String content;
 	private String date;
 	public FreeBoardComentDTO(int bnum, int cnum, String username, String content, String date) {
-		super();
+		super(); 
 		this.bnum = bnum;
 		this.cnum = cnum;
 		this.username = username;

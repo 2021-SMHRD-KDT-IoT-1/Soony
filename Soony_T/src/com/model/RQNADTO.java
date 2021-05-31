@@ -1,7 +1,7 @@
 package com.model;
 
 public class RQNADTO {
-
+ 
 	private int qnum;
 	private int rqnum;
 	private int title;

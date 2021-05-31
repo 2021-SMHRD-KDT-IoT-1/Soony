@@ -15,7 +15,7 @@ public class CongMember_infoDAO {
 	ResultSet rs = null;
 	ArrayList<CongMember_infoDTO> list = null;
 
-	public void conn() {
+	public void conn() { 
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

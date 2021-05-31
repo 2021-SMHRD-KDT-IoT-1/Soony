@@ -12,7 +12,7 @@ public class FingerPrintDAO {
 	PreparedStatement psmt = null;
 	int cnt = 0;
 	FingerPrintDTO dto = null;
-	ResultSet rs = null;
+	ResultSet rs = null; 
 	ArrayList<FingerPrintDTO> list = null;
 
 	public void conn() {
