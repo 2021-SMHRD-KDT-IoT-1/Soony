@@ -5,6 +5,14 @@ public class FingerPrintDTO {
 	private String fng;
 	private int alr;
 	private String id;
+	
+	
+
+	public FingerPrintDTO(String fng) {
+		super();
+		this.fng = fng;
+	
+	}
 
 	public FingerPrintDTO(String str_num, String fng, int alr, String id) {
 		super();
