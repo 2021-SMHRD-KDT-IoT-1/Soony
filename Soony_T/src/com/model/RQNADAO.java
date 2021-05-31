@@ -7,13 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class FreeBoardDAO {
+public class RQNADAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	int cnt = 0;
-	FreeBoardDTO dto = null;
+	RQNADTO dto = null;
 	ResultSet rs = null;
-	ArrayList<FreeBoardDTO> list = null;
+	ArrayList<RQNADTO> list = null;
 
 	public void conn() {
 
@@ -47,22 +47,20 @@ public class FreeBoardDAO {
 		}
 	}
 	// ½ÃÄö½º¸í Ãß°¡ ÇÊ¿ä
-	public int upload(FreeBoardDTO dto) {
+	public int upload(RQNADTO dto) {
 
 		conn();
 
 		try {
 
-			String sql = "insert into f_brd values(½ÃÄö½º,?,?,?,sysdate,?,?)";
+			String sql = "insert into rqna values(?,½ÃÄö½º,?,?,sysdate)";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
-			psmt.setString(2, dto.getUsername());
+			psmt.setInt(1, dto.getQnum());
+			psmt.setInt(2, dto.getRqnum());
 			psmt.setString(3, dto.getTitle());
-			psmt.setString(4, dto.getContent());
-			psmt.setString(5, dto.getDate());
-			psmt.setInt(6, dto.getView());
-			psmt.setInt(7, dto.getLike());
+			psmt.setString(5, dto.getContent());
+			psmt.setString(6, dto.getDate());
 
 			cnt = psmt.executeUpdate();
 
@@ -74,25 +72,24 @@ public class FreeBoardDAO {
 		return cnt;
 	}
 	
-	public ArrayList<FreeBoardDTO> FreeBoard() {
+	public ArrayList<RQNADTO> select() {
 		conn();
 		
 		try {
-			String sql = "select * from f_brd order by b_date desc";
+			String sql = "select * from rqna order by rq_date desc";
 			psmt = conn.prepareStatement(sql);
 			
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
 				
-				int num = rs.getInt(1);
-				String user = rs.getString(2);
+				
+				int rqnum = rs.getInt(2);
 				String title = rs.getString(3);
 				String content = rs.getString(4);
 				String date = rs.getString(5);
-				int view = rs.getInt(6);
-				int like = rs.getInt(7);
-				dto = new FreeBoardDTO(num, user, title, content, date, view, like);
+				
+				dto = new RQNADTO(rqnum, title, content, date);
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -103,15 +100,15 @@ public class FreeBoardDAO {
 		return list;
 	}
 	
-	public int delete(FreeBoardDTO dto) {
+	public int delete(RQNADTO dto) {
 
 		conn();
 
 		try {
-			String sql = "delete from f_brd where b_num = ? ";
+			String sql = "delete from rqna where rq_num = ? ";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
+			psmt.setInt(1, dto.getRqnum());
 			
 
 			cnt = psmt.executeUpdate();
@@ -125,16 +122,17 @@ public class FreeBoardDAO {
 
 	}
 	
-	public int update(FreeBoardDTO dto) {
+	public int update(RQNADTO dto) {
 
 		conn();
 
 		try {
-			String sql = "update f_brd set b_title = ?, b_content = ?";
+			String sql = "update rqna set rq_title = ?, rq_content = ? where rq_num = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getTitle());
 			psmt.setString(2, dto.getContent());
+			psmt.setInt(3, dto.getRqnum());
 		
 			
 

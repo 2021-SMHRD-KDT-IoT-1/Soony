@@ -1,14 +1,14 @@
 package com.model;
 
 public class QNADTO {
- 
-	private String num;
+
+	private int num;
 	private String username;
 	private String password;
 	private String title;
 	private String content;
 	private String date;
-	public QNADTO(String num, String username, String password, String title, String content, String date) {
+	public QNADTO(int num, String username, String password, String title, String content, String date) {
 		super();
 		this.num = num;
 		this.username = username;
@@ -17,10 +17,10 @@ public class QNADTO {
 		this.content = content;
 		this.date = date;
 	}
-	public String getNum() {
+	public int getNum() {
 		return num;
 	}
-	public void setNum(String num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
 	public String getUsername() {

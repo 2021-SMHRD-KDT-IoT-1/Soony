@@ -1,14 +1,22 @@
 package com.model;
 
 public class RQNADTO {
- 
+
 	private int qnum;
 	private int rqnum;
-	private int title;
-	private int content;
-	private int date;
-
-	public RQNADTO(int qnum, int rqnum, int title, int content, int date) {
+	private String title;
+	private String content;
+	private String date;
+	
+	public RQNADTO(int rqnum, String title, String content, String date) {
+		super();
+		this.rqnum = rqnum;
+		this.title = title;
+		this.content = content;
+		this.date = date;
+	}
+	
+	public RQNADTO(int qnum, int rqnum, String title, String content, String date) {
 		super();
 		this.qnum = qnum;
 		this.rqnum = rqnum;
@@ -33,28 +41,30 @@ public class RQNADTO {
 		this.rqnum = rqnum;
 	}
 
-	public int getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
-	public void setTitle(int title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	public int getContent() {
+	public String getContent() {
 		return content;
 	}
 
-	public void setContent(int content) {
+	public void setContent(String content) {
 		this.content = content;
 	}
 
-	public int getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(int date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
+
+	
 
 }
