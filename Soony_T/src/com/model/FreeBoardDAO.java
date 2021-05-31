@@ -130,11 +130,12 @@ public class FreeBoardDAO {
 		conn();
 
 		try {
-			String sql = "update f_brd set b_title = ?, b_content = ?";
+			String sql = "update f_brd set b_title = ?, b_content = ? where b_num = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getTitle());
 			psmt.setString(2, dto.getContent());
+			psmt.setInt(2, dto.getNum());
 		
 			
 
