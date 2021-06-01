@@ -27,9 +27,7 @@
 								<hr />
 								<p>Another fine freebie by HTML5 UP</p>
 							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-							</footer>
+							
 						</div>
 
 					<!-- 상단바 Nav -->
@@ -65,15 +63,22 @@
 			<!-- Main -->
 				<div class="wrapper style2">
 
-						<section id=logmain>
-			<div style="width:500px; margin:auto" align="center">
+					<article id="main" class="container special">
+						<header>
+							<br><br><br><h2><a href="#">회원가입</a></h2>
+						</header>
+						
+						<section id="logmain">
+						<div style="width:500px; margin:auto" align="center">
+						<form action="LoginCon" method="post">
+						
 				<form action="JoinCon" method="post">
 				<br><br>
 					<table>
 						<tr>
 							<td>아이디</td>
 							<td>
-								<input id="userId" type="text"  placeholder="ID을 입력하세요" name = "id" style="display:inline-block;">
+								<input id="userId" type="text"  placeholder="ID을 입력하세요" name = "id" style="width:calc( 100% / 2); display:inline-block;">
 								<input id="idChkBtn" type="button" value="중복확인">
 							</td>
 						</tr>
@@ -82,7 +87,7 @@
 						<tr><td height="20px" colspan="2"></td></tr>
 						
 						<tr>
-							<td>비밀번호</td>
+							<td >비밀번호</td>
 							<td><input type="password"  placeholder="PW를 입력하세요" name = "pw"></td>
 						</tr>
 						
