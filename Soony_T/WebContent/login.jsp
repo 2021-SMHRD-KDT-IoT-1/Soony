@@ -18,7 +18,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+				<div id="header" style="height: 10vh; min-height: 20em;">
 
 					<!-- Inner -->
 						<div class="inner">
@@ -27,9 +27,7 @@
 								<hr />
 								<p>Another fine freebie by HTML5 UP</p>
 							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-							</footer>
+						
 						</div>
 
 					<!-- 상단바 Nav -->
@@ -67,7 +65,7 @@
 
 					<article id="main" class="container special">
 						<header>
-							<h2><a href="#">로그인</a></h2>
+							<br><br><br><h2><a href="#">로그인</a></h2>
 						</header>
 						
 						<section id="logmain">
@@ -90,7 +88,7 @@
 						</table>
 						<br><br>
 						<div align="center">
-						<input type="submit" value="LogIn" class="button">
+						<input type="submit" value="로그인" class="button">
 						<a href="join.jsp" class="button alt">회원가입</a>
 					</div>
 				</form>
