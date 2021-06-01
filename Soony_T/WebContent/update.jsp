@@ -114,7 +114,7 @@
 			<br><br><br>
 			
 					<div align="center">
-						<input id="joinBtn" type="submit" value="회원가입" class="button fit" >
+						<input id="joinBtn" type="submit" value="정보수정" class="button fit" >
 						<!-- <a href="../main.jsp" class="button next scrolly" >되돌아가기</a>  -->
 					</div>
 					</form>
