@@ -8,11 +8,24 @@
 -->
 <html>
 	<head>
-		<title>Helios by HTML5 UP</title>
+		<title>콩순이 유모차</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style type="text/css">
+		#nav > div {
+		text-align : right;
+		margin-right: 50px;
+		margin-bottom: 3px;
+		}
+		#nav > div > button{
+		width: 100px;
+		padding-left: 0px;
+		padding-right: 0px;
+		}
+		
+		</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -33,7 +46,15 @@
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav" style="padding: 4em 0 1.5em 0;">
+					    
+						<nav id="nav" style="padding: 2em 0 1.5em 0;">
+						
+					    <div>
+					    <button><a href="login.jsp">로그인</a></button>
+					   <button><a href="join.jsp" >회원가입</a></button>
+					     </div> 
+					    
+						
 							<ul>
 								<li><a href="main.jsp">Home</a></li>
 								<li>
