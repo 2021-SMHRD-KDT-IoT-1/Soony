@@ -109,15 +109,15 @@ public class CongMember_infoDAO {
 		conn();
 
 		try {
-			String sql = "update mbr_info set pw = ?, tel = ?, addr = ?, email = ?, nick = ? where id = ?";
+			String sql = "update mbr_info set pw=?, name=?, tel=?, email=?, nick=? where id=?";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, dto.getId());
-			psmt.setString(2, dto.getPw());
-			psmt.setString(3, dto.getName());
-			psmt.setString(4, dto.getTel());
-			psmt.setString(5, dto.getEmail());
-			psmt.setString(6, dto.getNick());
+			psmt.setString(1, dto.getPw());
+			psmt.setString(2, dto.getName());
+			psmt.setString(3, dto.getTel());
+			psmt.setString(4, dto.getEmail());
+			psmt.setString(5, dto.getNick());
+			psmt.setString(6, dto.getId());
 
 			cnt = psmt.executeUpdate();
 

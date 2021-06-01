@@ -67,7 +67,7 @@
 					    <div>
 					    <%if(dto != null){ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
-					    <button><a href="">개인정보수정</a></button>
+					    <button><a href="update.jsp">개인정보수정</a></button>
 					    <button><a href="">회원탈퇴</a></button>
 					    <%}else{ %>
 					   <button><a href="login.jsp">로그인</a></button>
@@ -273,10 +273,7 @@
 							</article>
 						</div>
 					</section>
-						<!-- top버튼 -->
-						<a id="toTop" href="#top">
-							<img src="images/topPill.png" width="60px" height="100px" alt="" >
-						</a>
+
 				</div>
 
 			<!-- Footer -->
@@ -430,7 +427,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/top.js"></script>
 
 	</body>
 </html>
