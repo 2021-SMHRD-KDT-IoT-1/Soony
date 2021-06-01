@@ -15,7 +15,7 @@ public class CongMember_infoDAO {
 	ResultSet rs = null;
 	ArrayList<CongMember_infoDTO> list = null;
 
-	public void conn() { 
+	public void conn() {
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -53,13 +53,13 @@ public class CongMember_infoDAO {
 
 		try {
 
-			String sql = "insert into mbr_info values(?,?,?,?,?,?)";
+			String sql = "insert into mbr_info values(? , ? , ? , ? , ? , ?)";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
-			psmt.setString(3, dto.getTel());
-			psmt.setString(4, dto.getAddr());
+			psmt.setString(3, dto.getName());
+			psmt.setString(4, dto.getTel());
 			psmt.setString(5, dto.getEmail());
 			psmt.setString(6, dto.getNick());
 
@@ -81,7 +81,7 @@ public class CongMember_infoDAO {
 			String sql = "select * from mbr_info where id=? and pw=?";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, LogDto.getEmail());
+			psmt.setString(1, LogDto.getId());
 			psmt.setString(2, LogDto.getPw());
 
 			rs = psmt.executeQuery();
@@ -89,12 +89,12 @@ public class CongMember_infoDAO {
 			if (rs.next()) {
 				String id = rs.getString(1);
 				String pw = rs.getString(2);
-				String tel = rs.getString(3);
-				String addr = rs.getString(4);
-				String email = rs.getString(4);
-				String nick = rs.getString(4);
+				String name = rs.getString(3);
+				String tel = rs.getString(4);
+				String email = rs.getString(5);
+				String nick = rs.getString(6);
 
-				dto = new CongMember_infoDTO(id, pw, tel, addr, email, nick);
+				dto = new CongMember_infoDTO(id, pw, name, tel, email, nick);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -112,12 +112,12 @@ public class CongMember_infoDAO {
 			String sql = "update mbr_info set pw = ?, tel = ?, addr = ?, email = ?, nick = ? where id = ?";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, dto.getPw());
-			psmt.setString(2, dto.getTel());
-			psmt.setString(3, dto.getAddr());
-			psmt.setString(4, dto.getEmail());
-			psmt.setString(5, dto.getNick());
-			psmt.setString(6, dto.getId());
+			psmt.setString(1, dto.getId());
+			psmt.setString(2, dto.getPw());
+			psmt.setString(3, dto.getName());
+			psmt.setString(4, dto.getTel());
+			psmt.setString(5, dto.getEmail());
+			psmt.setString(6, dto.getNick());
 
 			cnt = psmt.executeUpdate();
 
@@ -144,12 +144,12 @@ public class CongMember_infoDAO {
 			while (rs.next()) {
 				String id = rs.getString(1);
 				String pw = rs.getString(2);
-				String tel = rs.getString(3);
-				String addr = rs.getString(4);
+				String name = rs.getString(3);
+				String tel = rs.getString(4);
 				String email = rs.getString(5);
 				String nick = rs.getString(6);
 
-				dto = new CongMember_infoDTO(id, pw, tel, addr, email, nick);
+				dto = new CongMember_infoDTO(id, pw, name, tel, email, nick);
 				list.add(dto);
 			}
 

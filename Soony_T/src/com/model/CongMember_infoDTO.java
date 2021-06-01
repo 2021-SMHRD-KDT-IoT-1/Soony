@@ -4,8 +4,8 @@ public class CongMember_infoDTO {
 
 	private String id;
 	private String pw;
+	private String name; 
 	private String tel; 
-	private String addr;
 	private String email;
 	private String nick;
 
@@ -15,12 +15,12 @@ public class CongMember_infoDTO {
 		this.pw = pw;
 	}
 
-	public CongMember_infoDTO(String id, String pw, String tel, String addr, String email, String nick) {
+	public CongMember_infoDTO(String id, String pw, String name, String tel, String email, String nick) {
 		super();
 		this.id = id;
 		this.pw = pw;
+		this.name = name;
 		this.tel = tel;
-		this.addr = addr;
 		this.email = email;
 		this.nick = nick;
 	}
@@ -41,20 +41,20 @@ public class CongMember_infoDTO {
 		this.pw = pw;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getTel() {
 		return tel;
 	}
 
 	public void setTel(String tel) {
 		this.tel = tel;
-	}
-
-	public String getAddr() {
-		return addr;
-	}
-
-	public void setAddr(String addr) {
-		this.addr = addr;
 	}
 
 	public String getEmail() {
@@ -72,5 +72,5 @@ public class CongMember_infoDTO {
 	public void setNick(String nick) {
 		this.nick = nick;
 	}
-
-}
+	
+	}

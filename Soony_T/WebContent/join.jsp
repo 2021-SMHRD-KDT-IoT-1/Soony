@@ -67,13 +67,13 @@
 
 						<section id=logmain>
 			<div style="width:500px; margin:auto" align="center">
-				<form action="../join" method="post">
+				<form action="JoinCon" method="post">
 				<br><br>
 					<table>
 						<tr>
 							<td>아이디</td>
 							<td>
-								<input id="userId" type="text"  placeholder="ID을 입력하세요" name = "id" style="width:calc( 100% / 3 ); display:inline-block;">
+								<input id="userId" type="text"  placeholder="ID을 입력하세요" name = "id" style="display:inline-block;">
 								<input id="idChkBtn" type="button" value="중복확인">
 							</td>
 						</tr>
@@ -107,7 +107,7 @@
 						
 						<tr>
 							<td>닉네임</td>
-							<td><input type="text"  placeholder="닉네임을 입력하세요" name = "license"></td>
+							<td><input type="text"  placeholder="닉네임을 입력하세요" name = "nick"></td>
 						</tr>
 						
 						<!-- 행과 행사이 칸 띄우기 -->
@@ -115,7 +115,7 @@
 						
 						<tr>
 							<td>이메일</td>
-							<td><input type="text"  placeholder="이메일을 입력하세요" name = "license"></td>
+							<td><input type="text"  placeholder="이메일을 입력하세요" name = "email"></td>
 						</tr>
 					</table>
 			
