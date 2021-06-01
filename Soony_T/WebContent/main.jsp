@@ -33,7 +33,7 @@
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav">
+						<nav id="nav" style="padding: 4em 0 1.5em 0;">
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li>
