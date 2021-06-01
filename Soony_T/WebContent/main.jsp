@@ -68,7 +68,7 @@
 					    <%if(dto != null){ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
 					    <button><a href="update.jsp">개인정보수정</a></button>
-					    <button><a href="">회원탈퇴</a></button>
+					    <button><a href="delete.jsp">회원탈퇴</a></button>
 					    <%}else{ %>
 					   <button><a href="login.jsp">로그인</a></button>
 					   <button><a href="join.jsp" >회원가입</a></button>
