@@ -1,3 +1,6 @@
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.CongMember_infoDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -28,6 +31,18 @@
 		</style>
 	</head>
 	<body class="homepage is-preload">
+	
+	<%
+		CongMember_infoDTO dto = (CongMember_infoDTO)session.getAttribute("Ldto");
+		ArrayList<CongMember_infoDTO> li = new ArrayList<CongMember_infoDTO>();
+		if( dto != null){
+			System.out.println("로그인 성공");
+			
+		}else{
+			
+			System.out.println("로그아웃 성공");
+		}
+	%>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -50,8 +65,15 @@
 						<nav id="nav" style="padding: 2em 0 1.5em 0;">
 						
 					    <div>
-					    <button><a href="login.jsp">로그인</a></button>
+					    <%if(dto != null){ %>
+					    <button><a href="LogoutCon">로그아웃</a></button>
+					    <button><a href="">개인정보수정</a></button>
+					    <button><a href="">회원탈퇴</a></button>
+					    <%}else{ %>
+					   <button><a href="login.jsp">로그인</a></button>
 					   <button><a href="join.jsp" >회원가입</a></button>
+					    <%} %>
+					    
 					     </div> 
 					    
 						
