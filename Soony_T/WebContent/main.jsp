@@ -34,7 +34,6 @@
 	
 	<%
 		CongMember_infoDTO dto = (CongMember_infoDTO)session.getAttribute("Ldto");
-		ArrayList<CongMember_infoDTO> li = new ArrayList<CongMember_infoDTO>();
 		if( dto != null){
 			System.out.println("로그인 성공");
 			
@@ -66,9 +65,15 @@
 						
 					    <div>
 					    <%if(dto != null){ %>
+					    
+					     <%if(dto.getId().equals("admin")){ %>
+					     <button><a href="LogoutCon">로그아웃</a></button>
+					     <button><a href="">회원정보</a></button>
+					    <%}else{ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
 					    <button><a href="update.jsp">개인정보수정</a></button>
 					    <button><a href="delete.jsp">회원탈퇴</a></button>
+					    <%} %>
 					    <%}else{ %>
 					   <button><a href="login.jsp">로그인</a></button>
 					   <button><a href="join.jsp" >회원가입</a></button>

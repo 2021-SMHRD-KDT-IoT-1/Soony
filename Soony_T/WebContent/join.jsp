@@ -70,7 +70,7 @@
 						
 						<section id="logmain">
 						<div style="width:500px; margin:auto" align="center">
-						<form action="LoginCon" method="post">
+						
 						
 				<form action="JoinCon" method="post">
 				<br><br>
