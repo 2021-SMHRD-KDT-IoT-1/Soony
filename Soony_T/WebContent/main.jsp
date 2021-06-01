@@ -23,7 +23,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Helios</a></h1>
+								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
 								<hr />
 								<p>Another fine freebie by HTML5 UP</p>
 							</header>
@@ -35,7 +35,7 @@
 					<!-- Nav -->
 						<nav id="nav" style="padding: 4em 0 1.5em 0;">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li><a href="main.jsp">Home</a></li>
 								<li>
 									<a href="#">Dropdown</a>
 									<ul>
@@ -54,9 +54,9 @@
 										<li><a href="#">Veroeros feugiat</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="sidebar.jsp">----</a></li>
+								<li><a href="sidebar.jsp">----</a></li>
+								<li><a href="sidebar.jsp">----</a></li>
 							</ul>
 						</nav>
 

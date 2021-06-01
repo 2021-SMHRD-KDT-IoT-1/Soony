@@ -49,9 +49,9 @@
 										<li><a href="#">Veroeros feugiat</a></li>
 									</ul>
 								</li>
-								<li><a href="sidebar.jsp">동일한 사이드 바로 이동</a></li>
-								<li><a href="sidebar.jsp">동일한 사이드 바로 이동</a></li>
-								<li><a href="sidebar.jsp">동일한 사이드 바로 이동</a></li>
+								<li><a href="sidebar.jsp">----</a></li>
+								<li><a href="sidebar.jsp">----</a></li>
+								<li><a href="sidebar.jsp">----</a></li>
 							</ul>
 						</nav>
 
