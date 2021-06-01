@@ -68,7 +68,7 @@
 					    
 					     <%if(dto.getId().equals("admin")){ %>
 					     <button><a href="LogoutCon">로그아웃</a></button>
-					     <button><a href="">회원정보</a></button>
+					     <button><a href="userinfo.jsp">회원정보</a></button>
 					    <%}else{ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
 					    <button><a href="update.jsp">개인정보수정</a></button>
