@@ -46,22 +46,21 @@ public class QNADAO {
 			e.printStackTrace();
 		}
 	}
-	// 시퀀스명 추가 필요
+	
+	// QnA등록하기
 	public int upload(QNADTO dto) {
 
 		conn();
 
 		try {
 
-			String sql = "insert into qna values(시퀀스,?,?,?,?,sysdate)";
+			String sql = "insert into qna values(q_num.nextval, ?, ?, ?, ?, sysdate)";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
-			psmt.setString(2, dto.getUsername());
-			psmt.setString(3, dto.getPassword());
-			psmt.setString(4, dto.getTitle());
-			psmt.setString(5, dto.getContent());
-			psmt.setString(6, dto.getDate());
+			psmt.setString(1, dto.getQ_username());
+			psmt.setString(2, dto.getQ_title());
+			psmt.setString(3, dto.getQ_content());
+			psmt.setString(4, dto.getQ_img());
 
 			cnt = psmt.executeUpdate();
 
@@ -110,7 +109,7 @@ public class QNADAO {
 			String sql = "delete from qna where q_num = ? ";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
+			psmt.setInt(1, dto.getQ_num());
 			
 
 			cnt = psmt.executeUpdate();
@@ -132,9 +131,8 @@ public class QNADAO {
 			String sql = "update qna set q_title = ?, q_content = ? where = q_password = ?";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, dto.getTitle());
-			psmt.setString(2, dto.getContent());
-			psmt.setString(3, dto.getPassword());
+			psmt.setString(1, dto.getQ_title());
+			psmt.setString(2, dto.getQ_content());
 		
 			
 

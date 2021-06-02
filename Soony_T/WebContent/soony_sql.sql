@@ -61,9 +61,9 @@ increment by 1
 CREATE TABLE qna ( 
 q_num NUMBER(10) PRIMARY KEY, 
 q_username VARCHAR2(100), 
-q_password VARCHAR2(15), 
 q_title VARCHAR2(100), 
-q_content VARCHAR2(500), 
+q_content VARCHAR2(500),
+q_img VARCHAR2(2000),
 q_date DATE );
 
 
@@ -77,6 +77,7 @@ CREATE TABLE rqna(
  rq_num NUMBER(10),
  rq_title VARCHAR2(100),
  rq_content VARCHAR2(500),
+ rq_img VARCHAR2(2000),
  rq_date DATE,
   CONSTRAINT rqna_FK_q_num FOREIGN KEY(q_num)
   REFERENCES qna(q_num) ON DELETE CASCADE
@@ -109,7 +110,7 @@ drop sequence b_num
 drop sequence c_num
 drop sequence f_num
 drop sequence q_num
-create sequence rq_num
+drop sequence rq_num
                              */
 
 

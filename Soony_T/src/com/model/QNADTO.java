@@ -2,57 +2,80 @@ package com.model;
 
 public class QNADTO {
 
-	private int num;
-	private String username;
-	private String password;
-	private String title;
-	private String content;
+	private int q_num;
+	private String q_username;
+	private String q_title;
+	private String q_content;
+	private String q_img;
 	private String date;
-	public QNADTO(int num, String username, String password, String title, String content, String date) {
+	
+	public QNADTO(int q_num, String q_username, String q_title, String q_content, String q_img,
+			String date) {
 		super();
-		this.num = num;
-		this.username = username;
-		this.password = password;
-		this.title = title;
-		this.content = content;
+		this.q_num = q_num;
+		this.q_username = q_username;
+		this.q_title = q_title;
+		this.q_content = q_content;
+		this.q_img = q_img;
 		this.date = date;
 	}
-	public int getNum() {
-		return num;
+	
+	public QNADTO(String q_username, String q_title, String q_content, String q_img) {
+		super();
+		this.q_username = q_username;
+		this.q_title = q_title;
+		this.q_content = q_content;
+		this.q_img = q_img;
 	}
-	public void setNum(int num) {
-		this.num = num;
+
+	public int getQ_num() {
+		return q_num;
 	}
-	public String getUsername() {
-		return username;
+
+	public void setQ_num(int q_num) {
+		this.q_num = q_num;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	public String getQ_username() {
+		return q_username;
 	}
-	public String getPassword() {
-		return password;
+
+	public void setQ_username(String q_username) {
+		this.q_username = q_username;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public String getQ_title() {
+		return q_title;
 	}
-	public String getTitle() {
-		return title;
+
+	public void setQ_title(String q_title) {
+		this.q_title = q_title;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+
+	public String getQ_content() {
+		return q_content;
 	}
-	public String getContent() {
-		return content;
+
+	public void setQ_content(String q_content) {
+		this.q_content = q_content;
 	}
-	public void setContent(String content) {
-		this.content = content;
+
+	public String getQ_img() {
+		return q_img;
 	}
+
+	public void setQ_img(String q_img) {
+		this.q_img = q_img;
+	}
+
 	public String getDate() {
 		return date;
 	}
+
 	public void setDate(String date) {
 		this.date = date;
 	}
+
 	
 	
 }
