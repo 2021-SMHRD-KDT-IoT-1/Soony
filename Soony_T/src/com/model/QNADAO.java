@@ -72,7 +72,44 @@ public class QNADAO {
 		return cnt;
 	}
 	
-	public ArrayList<QNADTO> select() {
+	//작성 된 QnA보기
+	public QNADTO showOne(int choice) {
+		
+		QNADTO dto = null;
+		conn();
+		
+		try {
+			String sql = "select *from qna where q_num = ?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setInt(1, choice);
+			
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int q_num = rs.getInt("q_num");
+				String q_username = rs.getString("q_username");
+				String q_title = rs.getString("q_title");
+				String q_content = rs.getString("q_content");
+				String q_img = rs.getString("q_img");
+				String q_date = rs.getString("q_date");
+				
+				dto = new QNADTO(q_num, q_username, q_title, q_content, q_img, q_date);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return dto;
+	}
+	
+	//QnA 목록보기
+	public ArrayList<QNADTO> showQna() {
+		
+		ArrayList<QNADTO> list = new ArrayList<QNADTO>();
+		
 		conn();
 		
 		try {
@@ -83,14 +120,14 @@ public class QNADAO {
 			
 			while(rs.next()) {
 				
-				int num = rs.getInt(1);
-				String user = rs.getString(2);
-				String pw = rs.getString(3);
-				String title = rs.getString(4);
-				String content = rs.getString(5);
+				int q_num = rs.getInt(1);
+				String q_username = rs.getString(2);
+				String q_title = rs.getString(3);
+				String q_content = rs.getString(4);
+				String q_img = rs.getString(5);
 				String date = rs.getString(6);
 				
-				dto = new QNADTO(num, user, pw, title, content, date);
+				dto = new QNADTO(q_num, q_username, q_title, q_content, q_img, date);
 				list.add(dto);
 			}
 		} catch (SQLException e) {

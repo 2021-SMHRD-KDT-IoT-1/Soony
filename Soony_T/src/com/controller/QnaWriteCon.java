@@ -63,8 +63,8 @@ public class QnaWriteCon extends HttpServlet {
 		// 데이터 베이스에 저장하기위해서 fileName, title, content 등의 정보 가져오기
 		String title = multi.getParameter("title");
 		String writer = info.getNick();
-		String file = URLEncoder.encode(multi.getFilesystemName("file"), "EUC-KR");
 		String content = multi.getParameter("content");
+		String file = URLEncoder.encode(multi.getFilesystemName("file"), "EUC-KR");
 
 		System.out.println(title);
 		System.out.println(writer);
@@ -81,7 +81,7 @@ public class QnaWriteCon extends HttpServlet {
 		}else {
 			System.out.println("파일 업로드 실패");
 		}
-		response.sendRedirect("qnaWrite.jsp");
+		response.sendRedirect("qnaMain.jsp");
 
 	}
 

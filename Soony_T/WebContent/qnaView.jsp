@@ -1,3 +1,5 @@
+<%@page import="com.model.QNADTO"%>
+<%@page import="com.model.QNADAO"%>
 <%@page import="com.model.CongMember_infoDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -24,7 +26,16 @@
 			
 			System.out.println("로그아웃 성공");
 		}
-	%>
+	
+	//get방식으로 보낸 num 받아오기
+	int q_num = Integer.parseInt(request.getParameter("q_num"));
+	//Sting get_num = request.getParameter("get_num");
+	//int num = Integer.parseInt(num);
+	
+	QNADAO dao = new QNADAO();
+	QNADTO qdto = dao.showOne(q_num);
+	
+%>
 	
 	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
@@ -76,36 +87,32 @@
 								</p>
 							</header>
 							
+							<!-- QnAView틀 시작-->
 							<div id = "board">
-								<form action="QnaWriteCon" method="post" enctype="multipart/form-data">
-								<table width="700" border="3" bordercolor="lightgray" align="center">
-				    			    <tr height=70>
-				      		      		<td id="title" width=80 style="word-break:break-all">작성자</td>
-				            			<td><%=dto.getNick() %></td>
-				       				 </tr>
-				       				 <tr>
-				           				<td id="title" width=80 style="word-break:break-all">제 목</td>
-				            			<td> <input name="title" type="text"  value=""/></td>        
-				        			</tr>
-				        			<tr>
-				            			<td id="title" width=80 style="word-break:break-all">내 용</td>
-				            			<td><textarea name="content" cols="72" rows="20"></textarea></td>        
-				        			</tr>
-				        			<tr>
-				            			<td id="title" width=100 style="word-break:break-all"> 파일첨부</td>
-				            			<td><input type="file" name="file" /></td>    
-				        			</tr>
-				      			</table>
-				 
-					       	 	<div align="center">
-					            	 <br><br>
-					               		<input type="reset" class="button" width=65 value="작성취소" >
-					                	<input type="submit" class="button" value="등록" >
-					                	<input type="button" class="button" value="목록" >            
-								</div>
-								</form>
+								<table id="list">
+									<tr>
+										<td>제목</td>
+										<td><%= qdto.getQ_title() %></td>
+									</tr>
+									<tr>
+										<td>작성자</td>
+										<td><%= dto.getNick() %></td>
+									</tr>
+									<tr>
+										<td colspan="2">내용</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+										<td><img src="upload/<%= qdto.getQ_img() %>"><br>
+										<%= qdto.getQ_content() %></td>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2"><a href="qnaMain.jsp"><button>뒤로가기</button></a></td>
+									</tr>
+								</table>
 							</div>
-							
+							<!-- QnAview틀 끝 -->
 						</article>
 						<hr />
 					</div>

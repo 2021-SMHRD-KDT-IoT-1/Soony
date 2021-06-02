@@ -1,3 +1,6 @@
+<%@page import="com.model.QNADTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.QNADAO"%>
 <%@page import="com.model.CongMember_infoDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -15,18 +18,25 @@
 		<link rel="stylesheet" href="assets/css/qna.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
+	<body class="no-sidebar is-preload">
 	<%
 		CongMember_infoDTO dto = (CongMember_infoDTO)session.getAttribute("Ldto");
 		if( dto != null){
 			System.out.println("로그인 성공");
-			
 		}else{
-			
 			System.out.println("로그아웃 성공");
 		}
-	%>
 	
-	<body class="no-sidebar is-preload">
+	QNADAO dao = new QNADAO();
+	ArrayList<QNADTO> list = dao.showQna();
+	if( list != null){
+		System.out.println("성공");
+	}else{
+		System.out.println("실패");
+	}
+	
+	%>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -70,42 +80,36 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">Q&A 작성하기</a></h2>
+								<h2><a href="#">Q&A</a></h2>
 								<p>
 									Morbi convallis lectus malesuada sed fermentum dolore amet
 								</p>
 							</header>
 							
-							<div id = "board">
-								<form action="QnaWriteCon" method="post" enctype="multipart/form-data">
-								<table width="700" border="3" bordercolor="lightgray" align="center">
-				    			    <tr height=70>
-				      		      		<td id="title" width=80 style="word-break:break-all">작성자</td>
-				            			<td><%=dto.getNick() %></td>
-				       				 </tr>
-				       				 <tr>
-				           				<td id="title" width=80 style="word-break:break-all">제 목</td>
-				            			<td> <input name="title" type="text"  value=""/></td>        
-				        			</tr>
-				        			<tr>
-				            			<td id="title" width=80 style="word-break:break-all">내 용</td>
-				            			<td><textarea name="content" cols="72" rows="20"></textarea></td>        
-				        			</tr>
-				        			<tr>
-				            			<td id="title" width=100 style="word-break:break-all"> 파일첨부</td>
-				            			<td><input type="file" name="file" /></td>    
-				        			</tr>
-				      			</table>
-				 
-					       	 	<div align="center">
-					            	 <br><br>
-					               		<input type="reset" class="button" width=65 value="작성취소" >
-					                	<input type="submit" class="button" value="등록" >
-					                	<input type="button" class="button" value="목록" >            
-								</div>
-								</form>
+							<!-- QnA틀 -->
+							<div id="board">
+								<table id = "list">
+									<tr>
+										<td>번호</td>
+										<td>제목</td>
+										<td>작성자</td>
+										<td>시간</td>
+									</tr>
+									
+									<%for(int i=0; i<list.size();i++){ %>
+										<tr>
+											<td> <%=i+1 %> </td>
+											<td> <a href="qnaView.jsp?q_num=<%= list.get(i).getQ_num() %>"><%=list.get(i).getQ_title() %> </a></td>
+											<td> <%=list.get(i).getQ_username() %> </td>
+											<td> <%=list.get(i).getDate() %> </td>
+										</tr>
+									<%} %>	
+								</table>
+								
+								<a href="main.jsp"><button id="writer">홈으로가기</button></a>
+								<a href="qnaWrite.jsp"><button id="writer">작성하러가기</button></a>
 							</div>
-							
+							<!-- QnA틀 끝 -->
 						</article>
 						<hr />
 					</div>
