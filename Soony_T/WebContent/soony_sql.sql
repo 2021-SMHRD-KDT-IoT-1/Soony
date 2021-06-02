@@ -24,7 +24,8 @@ b_title VARCHAR2 (100),
 b_content VARCHAR2 (500), 
 b_date DATE, 
 b_view NUMBER(10),
-b_like NUMBER(10));
+b_like NUMBER(10)
+b_photo VARCHAR2(100));
 
 create sequence b_num 
 start with 1 
