@@ -71,7 +71,7 @@ public class QnaWriteCon extends HttpServlet {
 		System.out.println(file);
 		System.out.println(content);
 		
-		QNADTO dto = new QNADTO(writer, title, file, content);
+		QNADTO dto = new QNADTO(writer, title, content, file);
 		QNADAO dao = new QNADAO();
 		
 		int cnt = dao.upload(dto);

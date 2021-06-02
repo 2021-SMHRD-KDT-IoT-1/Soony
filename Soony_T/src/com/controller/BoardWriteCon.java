@@ -69,7 +69,7 @@ public class BoardWriteCon extends HttpServlet {
 				System.out.println(file);
 				System.out.println(content);
 				
-				FreeBoardDTO dto = new FreeBoardDTO(writer, title, file, content);
+				FreeBoardDTO dto = new FreeBoardDTO(writer, title, content, file);
 				FreeBoardDAO dao = new FreeBoardDAO();
 				
 				int cnt = dao.upload(dto);
