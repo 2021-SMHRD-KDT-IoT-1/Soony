@@ -10,6 +10,23 @@ public class FreeBoardDTO {
 	private int like;
 	private String photo;
 	
+	public FreeBoardDTO(int num) {
+		super();
+		this.num = num;
+	}
+	
+	
+
+	public FreeBoardDTO(int num, String title, String content, String photo) {
+		super();
+		this.num = num;
+		this.title = title;
+		this.content = content;
+		this.photo = photo;
+	}
+
+
+
 	public FreeBoardDTO(String username, String title, String content, String photo) {
 		super();
 		

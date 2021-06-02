@@ -71,12 +71,14 @@ public class FreeBoardDAO {
 		}
 		return cnt;
 	}
-	
+	// FreeBoardº¸±â
 	public ArrayList<FreeBoardDTO> FreeBoard() {
+		
+		ArrayList<FreeBoardDTO> list = new ArrayList<FreeBoardDTO>();
 		conn();
 		
 		try {
-			String sql = "select * from f_brd order by b_date desc";
+			String sql = "select * from f_brd order by b_date desc ";
 			psmt = conn.prepareStatement(sql);
 			
 			rs = psmt.executeQuery();
@@ -84,14 +86,15 @@ public class FreeBoardDAO {
 			while(rs.next()) {
 				
 				int num = rs.getInt(1);
-				String user = rs.getString(2);
+				String username = rs.getString(2);
 				String title = rs.getString(3);
 				String content = rs.getString(4);
 				String date = rs.getString(5);
 				int view = rs.getInt(6);
 				int like = rs.getInt(7);
 				String photo = rs.getString(8);
-				dto = new FreeBoardDTO(num, user, title, content, date, view, like, photo);
+				
+				dto = new FreeBoardDTO(num, username, title, content, date, view, like, photo);
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -100,6 +103,40 @@ public class FreeBoardDAO {
 			close();
 		}
 		return list;
+	}
+	
+public FreeBoardDTO showOne(int choice) {
+		
+	FreeBoardDTO dto = null;
+		conn();
+		
+		try {
+			String sql = "select *from f_brd where b_num = ?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setInt(1, choice);
+			
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int num = rs.getInt(1);
+				String username = rs.getString(2);
+				String title = rs.getString(3);
+				String content = rs.getString(4);
+				String date = rs.getString(5);
+				int view = rs.getInt(6);
+				int like = rs.getInt(7);
+				String photo = rs.getString(8);
+				
+				dto = new FreeBoardDTO(num, username, title, content, date, view, like, photo);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return dto;
 	}
 	
 	public int delete(FreeBoardDTO dto) {
