@@ -47,23 +47,20 @@ public class FreeBoardDAO {
 			e.printStackTrace();
 		}
 	}
-	// 시퀀스명 추가 필요
+	// 자유게시판 게시글 등록
 	public int upload(FreeBoardDTO dto) {
 
 		conn();
 
 		try {
 
-			String sql = "insert into f_brd values(시퀀스,?,?,?,sysdate,?,?)";
+			String sql = "insert into f_brd values(b_num.nextval,?,?,?,sysdate,0,0,?)";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
-			psmt.setString(2, dto.getUsername());
-			psmt.setString(3, dto.getTitle());
-			psmt.setString(4, dto.getContent());
-			psmt.setString(5, dto.getDate());
-			psmt.setInt(6, dto.getView());
-			psmt.setInt(7, dto.getLike());
+			psmt.setString(1, dto.getUsername());
+			psmt.setString(2, dto.getTitle());
+			psmt.setString(3, dto.getContent());
+			psmt.setString(4, dto.getPhoto());
 
 			cnt = psmt.executeUpdate();
 
@@ -93,7 +90,8 @@ public class FreeBoardDAO {
 				String date = rs.getString(5);
 				int view = rs.getInt(6);
 				int like = rs.getInt(7);
-				dto = new FreeBoardDTO(num, user, title, content, date, view, like);
+				String photo = rs.getString(8);
+				dto = new FreeBoardDTO(num, user, title, content, date, view, like, photo);
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -131,11 +129,13 @@ public class FreeBoardDAO {
 		conn();
 
 		try {
-			String sql = "update f_brd set b_title = ?, b_content = ?";
+			String sql = "update f_brd set b_title = ?, b_content = ?, b_photo = ? where b_num = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getTitle());
 			psmt.setString(2, dto.getContent());
+			psmt.setString(3, dto.getPhoto());
+			psmt.setInt(4, dto.getNum());
 		
 			
 

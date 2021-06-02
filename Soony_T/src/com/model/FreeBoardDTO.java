@@ -8,8 +8,18 @@ public class FreeBoardDTO {
 	private String date;
 	private int view;
 	private int like;
+	private String photo;
+	
+	public FreeBoardDTO(String username, String title, String content, String photo) {
+		super();
+		
+		this.username = username;
+		this.title = title;
+		this.content = content;
+		this.photo = photo;
+	}
   
-	public FreeBoardDTO(int num, String username, String title, String content, String date, int view, int like) {
+	public FreeBoardDTO(int num, String username, String title, String content, String date, int view, int like, String photo) {
 		super();
 		this.num = num;
 		this.username = username;
@@ -18,6 +28,7 @@ public class FreeBoardDTO {
 		this.date = date;
 		this.view = view;
 		this.like = like;
+		this.photo = photo;
 	}
 
 	public int getNum() {
@@ -74,6 +85,14 @@ public class FreeBoardDTO {
 
 	public void setLike(int like) {
 		this.like = like;
+	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 
 }
