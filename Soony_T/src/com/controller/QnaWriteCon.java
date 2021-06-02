@@ -51,6 +51,8 @@ public class QnaWriteCon extends HttpServlet {
 		String str = (String) files.nextElement();
 
 		String uploadPath = root + File.separator + multi.getFilesystemName(str);
+		
+		System.out.println(uploadPath); //경로 확인
 
 		HttpSession session = request.getSession();
 		

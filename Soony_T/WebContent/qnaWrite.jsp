@@ -76,6 +76,7 @@
 								</p>
 							</header>
 							
+							<!-- QnAÆ² -->
 							<div id = "board">
 								<form action="QnaWriteCon" method="post" enctype="multipart/form-data">
 								<table width="700" border="3" bordercolor="lightgray" align="center">
@@ -105,7 +106,7 @@
 								</div>
 								</form>
 							</div>
-							
+							<!-- QnAÆ² ³¡ -->
 						</article>
 						<hr />
 					</div>
