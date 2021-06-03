@@ -63,7 +63,7 @@
 										<li><a href="#">방범 알림</a></li>
 									</ul>
 								</li>
-								<li><a href="sidebar.jsp">자유게시판</a></li>
+								<li><a href="boardMain.jsp">자유게시판</a></li>
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>

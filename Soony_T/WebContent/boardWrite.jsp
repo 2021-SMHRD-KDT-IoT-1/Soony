@@ -51,12 +51,12 @@
 										<li><a href="#">방범 알림</a></li>
 									</ul>
 								</li>
-								<li><a href="sidebar.jsp">자유게시판</a></li>
+								<li><a href="boardMain.jsp">자유게시판</a></li>
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>
 										<li><a href="sidebar.jsp">자주 묻는 질문</a></li>
-										<li><a href="sidebar.jsp">QnA</a></li>
+										<li><a href="qnaMain.jsp">QnA</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -101,7 +101,7 @@
 					            	 <br><br>
 					               		<input type="reset" class="button" width=65 value="작성취소" >
 					                	<input type="submit" class="button" value="등록" >
-					                	<input type="button" class="button" value="목록" >            
+					                	<input type="button" class="button" value="목록" >  
 								</div>
 								</form>
 							</div>
