@@ -91,7 +91,7 @@
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>
-										<li><a href="sidebar.jsp">자주 묻는 질문</a></li>
+										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
 										<li><a href="qnaMain.jsp">QnA</a></li>
 									</ul>
 								</li>
@@ -136,7 +136,7 @@
 					       	 	<div align="center">
 					            	 <br><br>
 					               		<input type="reset" class="button" width=65 value="초기화" >
-					                	<input type="submit" class="button" value="등록" >
+					                	<input type="submit" class="button" value="수정완료" >
 					                	<a href="boardMain.jsp"><input type="button" class="button" value="목록" ></a> 
 								</div>
 								</form>

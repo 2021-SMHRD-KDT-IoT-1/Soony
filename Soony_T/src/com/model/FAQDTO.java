@@ -13,6 +13,14 @@ public class FAQDTO {
 		this.num = num;
 	}
 
+	public FAQDTO( String title, String content, String img) {
+		super();
+		
+		this.title = title;
+		this.content = content;
+		this.img = img;
+	}
+	
 	public FAQDTO(int num, String title, String content, String img) {
 		super();
 		this.num = num;

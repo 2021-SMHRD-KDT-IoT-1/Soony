@@ -54,13 +54,12 @@ public class FAQDAO {
 
 		try {
 
-			String sql = "insert into faq values(½ÃÄö½º,?,?,?)";
+			String sql = "insert into faq values(f_num.nextval,?,?,?)";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
-			psmt.setString(2, dto.getTitle());
-			psmt.setString(3, dto.getContent());
-			psmt.setString(4, dto.getImg());
+			psmt.setString(1, dto.getTitle());
+			psmt.setString(2, dto.getContent());
+			psmt.setString(3, dto.getImg());
 
 			cnt = psmt.executeUpdate();
 
@@ -72,7 +71,7 @@ public class FAQDAO {
 		return cnt;
 	}
 	//FAQ º¸±â
-	public ArrayList<FAQDTO> select() {
+	public ArrayList<FAQDTO> showFAQ() {
 
 		list = new ArrayList<FAQDTO>();
 

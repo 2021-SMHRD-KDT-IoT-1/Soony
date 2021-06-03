@@ -95,7 +95,7 @@
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>
-										<li><a href="sidebar.jsp">자주 묻는 질문</a></li>
+										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
 										<li><a href="qnaMain.jsp">QnA</a></li>
 									</ul>
 								</li>
