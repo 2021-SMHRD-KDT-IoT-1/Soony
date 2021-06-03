@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.model.CongMember_infoDTO;
+import com.model.FreeBoardDAO;
+import com.model.FreeBoardDTO;
 import com.model.QNADAO;
 import com.model.QNADTO;
 import com.oreilly.servlet.MultipartRequest;
@@ -23,8 +25,6 @@ public class QnaUpdateCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
 		request.setCharacterEncoding("euc-kr");
 		response.setContentType("text/html; charset=EUC-KR");
 
@@ -61,15 +61,15 @@ public class QnaUpdateCon extends HttpServlet {
 		String title = multi.getParameter("title");
 		String file = URLEncoder.encode(multi.getFilesystemName("file"), "EUC-KR");
 		String content = multi.getParameter("content");
-		int q_num = Integer.parseInt(request.getParameter("q_num"));
+		int num = Integer.parseInt(request.getParameter("q_num"));
 
 		System.out.println(title);
 		System.out.println(file);
 		System.out.println(content);
-		System.out.println(q_num);
+		System.out.println(num);
 		
+		QNADTO dto = new QNADTO(num, title, content, file);
 		QNADAO dao = new QNADAO();
-		QNADTO dto = new QNADTO(q_num, title, content, file);
 		
 		int cnt = dao.update(dto);
 		
@@ -79,10 +79,6 @@ public class QnaUpdateCon extends HttpServlet {
 			System.out.println("수정 실패!");
 		}
 		response.sendRedirect("qnaMain.jsp");
-		
-		
-		
-		
 	}
 
 }
