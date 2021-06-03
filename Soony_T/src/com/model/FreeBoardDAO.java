@@ -139,7 +139,7 @@ public FreeBoardDTO showOne(int choice) {
 		return dto;
 	}
 	
-	public int delete(FreeBoardDTO dto) {
+	public int delete(String nick) {
 
 		conn();
 
@@ -147,7 +147,7 @@ public FreeBoardDTO showOne(int choice) {
 			String sql = "delete from f_brd where b_num = ? ";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
+			psmt.setString(1, nick);
 			
 
 			cnt = psmt.executeUpdate();

@@ -19,10 +19,11 @@ public class FreeBoardDTO {
 
 	public FreeBoardDTO(int num, String title, String content, String photo) {
 		super();
-		this.num = num;
+		
 		this.title = title;
 		this.content = content;
 		this.photo = photo;
+		this.num = num;
 	}
 
 
