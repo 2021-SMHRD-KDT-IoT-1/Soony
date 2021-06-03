@@ -14,6 +14,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style type="text/css">
+		#nav > div {
+		text-align : right;
+		margin-right: 50px;
+		margin-bottom: 3px;
+		}
+		#nav > div > button{
+		width: 100px;
+		padding-left: 0px;
+		padding-right: 0px;
+		}
+		
+		</style>
 	</head>
 	<%
 		CongMember_infoDTO dto = (CongMember_infoDTO)session.getAttribute("Ldto");
@@ -40,7 +53,26 @@
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav">
+						<nav id="nav" style="padding: 2em 0 1.5em 0;">
+						
+					    <div>
+					    <%if(dto != null){ %>
+					    
+					     <%if(dto.getId().equals("admin")){ %>
+					     <button><a href="LogoutCon">로그아웃</a></button>
+					     <button><a href="userinfo.jsp">회원정보</a></button>
+					    <%}else{ %>
+					    <button><a href="LogoutCon">로그아웃</a></button>
+					    <button><a href="update.jsp">개인정보수정</a></button>
+					    <button><a href="delete.jsp">회원탈퇴</a></button>
+					    <%} %>
+					    <%}else{ %>
+					   <button><a href="login.jsp">로그인</a></button>
+					   <button><a href="join.jsp" >회원가입</a></button>
+					    <%} %>
+					    
+					     </div> 
+					    
 						<ul>
 								<li><a href="main.jsp">전체보기</a></li>
 								<li>
@@ -99,9 +131,9 @@
 				 
 					       	 	<div align="center">
 					            	 <br><br>
-					               		<input type="reset" class="button" width=65 value="작성취소" >
+					               		<input type="reset" class="button" width=65 value="초기화" >
 					                	<input type="submit" class="button" value="등록" >
-					                	<input type="button" class="button" value="목록" >  
+					                	<a href="boardMain.jsp"><input type="button" class="button" value="목록" ></a> 
 								</div>
 								</form>
 							</div>

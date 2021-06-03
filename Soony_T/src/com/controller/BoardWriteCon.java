@@ -79,7 +79,7 @@ public class BoardWriteCon extends HttpServlet {
 				}else {
 					System.out.println("파일 업로드 실패");
 				}
-				response.sendRedirect("boardWrite.jsp");
+				response.sendRedirect("boardMain.jsp");
 
 			}
 
