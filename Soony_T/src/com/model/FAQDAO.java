@@ -102,7 +102,39 @@ public class FAQDAO {
 		return list;
 	}
 	
-	public int delete(FAQDTO dto) {
+	//작성 된 QnA보기
+		public FAQDTO showOne(int choice) {
+			
+			FAQDTO dto = null;
+			conn();
+			
+			try {
+				String sql = "select *from faq where f_num = ?";
+				psmt = conn.prepareStatement(sql);
+				
+				psmt.setInt(1, choice);
+				
+				rs = psmt.executeQuery();
+				
+				while(rs.next()) {
+					int num = rs.getInt(1);
+					String title = rs.getString(2);
+					String content = rs.getString(3);
+					String img = rs.getString(4);
+					
+					
+					dto = new FAQDTO(num, title, content, img);
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}finally {
+				close();
+			}
+			return dto;
+		}
+	
+	public int delete(String num) {
 
 		conn();
 
@@ -110,7 +142,7 @@ public class FAQDAO {
 			String sql = "delete from faq where f_num=?";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setInt(1, dto.getNum());
+			psmt.setString(1, num);
 			
 
 			cnt = psmt.executeUpdate();
@@ -129,12 +161,13 @@ public class FAQDAO {
 		conn();
 
 		try {
-			String sql = "update faq set f_title = ?, f_content = ?, f_img = ? ";
+			String sql = "update faq set f_title = ?, f_content = ?, f_img = ? where f_num = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getTitle());
 			psmt.setString(2, dto.getContent());
 			psmt.setString(3, dto.getImg());
+			psmt.setInt(4, dto.getNum());
 			
 
 			cnt = psmt.executeUpdate();
