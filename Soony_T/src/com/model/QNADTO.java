@@ -27,6 +27,15 @@ public class QNADTO {
 		this.q_content = q_content;
 		this.q_img = q_img;
 	}
+	
+	public QNADTO(int q_num, String q_title, String q_content, String q_img) {
+		super();
+		this.q_num = q_num;
+		this.q_title = q_title;
+		this.q_content = q_content;
+		this.q_img = q_img;
+	}
+
 
 	public int getQ_num() {
 		return q_num;

@@ -48,6 +48,7 @@
 	QNADAO dao = new QNADAO();
 	QNADTO qdto = dao.showOne(q_num);
 	
+	
 %>
 	
 	<body class="no-sidebar is-preload">
@@ -140,7 +141,14 @@
 										</td>
 									</tr>
 									<tr>
-										<td colspan="2"><a href="qnaMain.jsp"><button>뒤로가기</button></a></td>
+										<td colspan="2">
+										<a href="qnaMain.jsp"><button>뒤로가기</button></a>
+										<%if(dto.getNick().equals(qdto.getQ_username())){ %>
+											<a href="qnaUpdate.jsp?q_num=<%=qdto.getQ_num()%>"><button>수정하기</button></a>
+											<a href="QnaDeleteCon?q_num=<%=qdto.getQ_num()%>"><button>삭제하기</button></a>
+										<%} %>
+										
+										</td>
 									</tr>
 								</table>
 							</div>

@@ -138,19 +138,20 @@ public class QNADAO {
 		return list;
 	}
 	
-	public int delete(QNADTO dto) {
+	//QnA삭제
+	public int delete(String q_num) {
 
 		conn();
 
 		try {
 			String sql = "delete from qna where q_num = ? ";
 			psmt = conn.prepareStatement(sql);
-
-			psmt.setInt(1, dto.getQ_num());
 			
 
-			cnt = psmt.executeUpdate();
+			psmt.setString(1, q_num);
 
+			cnt = psmt.executeUpdate();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -160,16 +161,19 @@ public class QNADAO {
 
 	}
 	
+	//QnA수정
 	public int update(QNADTO dto) {
 
 		conn();
 
 		try {
-			String sql = "update qna set q_title = ?, q_content = ? where = q_password = ?";
+			String sql = "update qna set q_title = ?, q_content = ?, q_img =? where = q_num = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getQ_title());
 			psmt.setString(2, dto.getQ_content());
+			psmt.setString(3, dto.getQ_img());
+			psmt.setInt(4, dto.getQ_num());
 		
 			
 
