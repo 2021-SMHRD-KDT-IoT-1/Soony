@@ -187,34 +187,7 @@
 
 	</body>
 
-<script>
-$(function(){
-	var submitChk = false;
-	$('#joinBtn').attr('disabled',true);
-	
-	$('#idChkBtn').click(function(){
-		var userId = $('#userId').val();
-		$.ajax({
-			url:'/Healthy_drugger_new/idCheck',
-			data:{'user_id':userId},
-			async:false,
-			success:function(data){
-				var result = data;
-				if(result){
-					submitChk = true;
-					$('#joinBtn').removeAttr('disabled');
-					alert('사용 가능한 ID입니다.');
-				}else{
-					submitChk = false;
-					$('#joinBtn').attr('disabled',true);
-					alert('사용 불가능한 ID입니다.');
-				}
-			}
-		})
-	});
-	
-})
-</script>
+
 	
 	
 	

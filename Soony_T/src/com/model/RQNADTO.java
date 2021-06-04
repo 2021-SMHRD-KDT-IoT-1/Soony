@@ -4,14 +4,26 @@ public class RQNADTO {
 
 	private int qnum;
 	private int rqnum;
-	private String title;
+	private String username;
 	private String content;
 	private String date;
 	
+	public RQNADTO(int rqnum) {
+		super();
+		this.rqnum = rqnum;
+	}
+
+	public RQNADTO(int qnum, String username, String content) {
+		super();
+		this.qnum = qnum;
+		this.username = username;
+		this.content = content;
+	}
+
 	public RQNADTO(int rqnum, String title, String content, String date) {
 		super();
 		this.rqnum = rqnum;
-		this.title = title;
+		this.username = title;
 		this.content = content;
 		this.date = date;
 	}
@@ -20,7 +32,7 @@ public class RQNADTO {
 		super();
 		this.qnum = qnum;
 		this.rqnum = rqnum;
-		this.title = title;
+		this.username = title;
 		this.content = content;
 		this.date = date;
 	}
@@ -41,12 +53,12 @@ public class RQNADTO {
 		this.rqnum = rqnum;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getContent() {

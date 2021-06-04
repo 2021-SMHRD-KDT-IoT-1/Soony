@@ -1,3 +1,6 @@
+<%@page import="com.model.RQNADTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.RQNADAO"%>
 <%@page import="com.model.QNADTO"%>
 <%@page import="com.model.QNADAO"%>
 <%@page import="com.model.CongMember_infoDTO"%>
@@ -21,7 +24,7 @@
 		text-align : right;
 		margin-right: 50px;
 		margin-bottom: 3px;
-		}
+		} 
 		#nav > div > button{
 		width: 100px;
 		padding-left: 0px;
@@ -47,6 +50,10 @@
 	
 	QNADAO dao = new QNADAO();
 	QNADTO qdto = dao.showOne(q_num);
+	
+	
+	RQNADAO daor = new RQNADAO();
+	ArrayList<RQNADTO> listr = daor.QNAComent(q_num); 
 	
 %>
 	
@@ -128,15 +135,15 @@
 									</tr>
 									<tr>
 										<td>작성자</td>
-										<td><%= dto.getNick() %></td>
+										<td><%= qdto.getQ_username() %></td>
 									</tr>
 									<tr>
 										<td colspan="2">내용</td>
 									</tr>
 									<tr>
 										<td colspan="2">
-										<td><img src="upload/<%= qdto.getQ_img() %>"><br>
-										<%= qdto.getQ_content() %></td>
+										<img src="upload/<%= qdto.getQ_img() %>"><br>
+										<%= qdto.getQ_content() %>
 										</td>
 									</tr>
 									<tr>
@@ -151,6 +158,43 @@
 										</td>
 									</tr>
 								</table>
+								
+								<table>
+								
+								<tr>
+								<td>번호</td>
+								<td>작성자</td>
+								<td>내용</td>
+								<td>날짜</td>
+								<td></td>
+								
+								</tr>
+								
+								<%for(int i = 0; i< listr.size(); i++){ %>
+								<tr>
+								<td><%=i+1 %></td>
+								<td><%=listr.get(i).getUsername()%></td>
+								<td><%=listr.get(i).getContent()%></td>
+								<td><%=listr.get(i).getDate()%></td>
+								<%if(dto.getNick().equals(listr.get(i).getUsername())) {%>
+								<td><a href="QnaDeleteComentCon?rq_num=<%=listr.get(i).getRqnum() %>&q_num=<%=qdto.getQ_num()%>"> 삭제</a> </td>
+								<%} %>
+								<%} %>
+								</tr>
+								
+								</table>
+								
+								<form action="QnaBoardComentCon?q_num=<%=qdto.getQ_num() %>" method="post">
+								<ul>
+								<ul>
+								<p>댓글작성하기</p>
+								<textarea name="content" rows="5" style="width: 80%; resize:none;"></textarea>
+								</ul>
+								<ul> 
+								<button><a><input type = "submit" value="작성완료"></a></button>
+								</ul>
+								</ul>
+								</form>
 							</div>
 							<!-- QnAview틀 끝 -->
 						</article>

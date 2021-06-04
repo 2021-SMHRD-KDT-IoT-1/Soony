@@ -53,14 +53,13 @@ public class RQNADAO {
 
 		try {
 
-			String sql = "insert into rqna values(?,½ÃÄö½º,?,?,sysdate)";
+			String sql = "insert into rqna values(?,rq_num.nextval,?,?,sysdate)";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setInt(1, dto.getQnum());
-			psmt.setInt(2, dto.getRqnum());
-			psmt.setString(3, dto.getTitle());
-			psmt.setString(5, dto.getContent());
-			psmt.setString(6, dto.getDate());
+			psmt.setString(2, dto.getUsername());
+			psmt.setString(3, dto.getContent());
+			
 
 			cnt = psmt.executeUpdate();
 
@@ -72,24 +71,26 @@ public class RQNADAO {
 		return cnt;
 	}
 	
-	public ArrayList<RQNADTO> select() {
+	public ArrayList<RQNADTO> QNAComent(int num) {
+		ArrayList<RQNADTO> list = new ArrayList<RQNADTO>();
 		conn();
 		
 		try {
-			String sql = "select * from rqna order by rq_date desc";
+			String sql = "select * from rqna where q_num = ? order by rq_date ";
 			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, num);
 			
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
 				
-				
-				int rqnum = rs.getInt(2);
-				String title = rs.getString(3);
+				int q_num = rs.getInt(1);
+				int rq_num = rs.getInt(2);
+				String username = rs.getString(3);
 				String content = rs.getString(4);
 				String date = rs.getString(5);
 				
-				dto = new RQNADTO(rqnum, title, content, date);
+				dto = new RQNADTO(q_num, rq_num, username, content, date);
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -130,7 +131,7 @@ public class RQNADAO {
 			String sql = "update rqna set rq_title = ?, rq_content = ? where rq_num = ?";
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1, dto.getTitle());
+			psmt.setString(1, dto.getUsername());
 			psmt.setString(2, dto.getContent());
 			psmt.setInt(3, dto.getRqnum());
 		

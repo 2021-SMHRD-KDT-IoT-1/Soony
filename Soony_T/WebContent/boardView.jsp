@@ -48,19 +48,17 @@
 	
 	//get방식으로 보낸 num 받아오기
 	int b_num = Integer.parseInt(request.getParameter("b_num"));
-	System.out.println(b_num);
 	//Sting get_num = request.getParameter("get_num");
 	//int num = Integer.parseInt(num);
 	
 	FreeBoardDAO dao = new FreeBoardDAO();
 	FreeBoardDTO bdto = dao.showOne(b_num);
 	
-	ArrayList<FreeBoardDTO> list = dao.FreeBoard();
+	
 	//댓글
 	FreeBoardComentDAO daoc = new FreeBoardComentDAO();
 	
 	ArrayList<FreeBoardComentDTO> listco = daoc.FreeBoardComent(b_num);
-	System.out.println( listco.size());
 
 
 %>

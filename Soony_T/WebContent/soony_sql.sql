@@ -78,7 +78,6 @@ CREATE TABLE rqna(
  rq_num NUMBER(10),
  rq_title VARCHAR2(100),
  rq_content VARCHAR2(500),
- rq_img VARCHAR2(2000),
  rq_date DATE,
   CONSTRAINT rqna_FK_q_num FOREIGN KEY(q_num)
   REFERENCES qna(q_num) ON DELETE CASCADE
