@@ -180,6 +180,34 @@ public class CongMember_infoDAO {
 			close();
 		}
 		return cnt;
+	}
+
+	public boolean idCheck(String id) {
+
+		boolean check = false;
+
+		try {
+			conn();
+
+			String sql = "select * from mbr_info where id = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, id);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				check = true;
+			} else {
+				check = false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return check;
 
 	}
 }

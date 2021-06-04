@@ -1,3 +1,4 @@
+<%@page import="com.model.CongMember_infoDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -15,6 +16,11 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="homepage is-preload">
+	<%
+		String id = request.getParameter("id");
+		CongMember_infoDAO dao = new CongMember_infoDAO();
+		boolean result = dao.idCheck(id);
+	%>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -73,7 +79,7 @@
 						<tr>
 							<td>아이디</td>
 							<td>
-								<input id="userId" type="text"  placeholder="ID을 입력하세요" name = "id" style="width:calc( 100% / 2); display:inline-block;">
+								<input id="userId" type="text"  placeholder="ID를 입력하세요" name = "id" style="width:calc( 100% / 2); display:inline-block;">
 								<input id="idChkBtn" type="button" value="중복확인">
 							</td>
 						</tr>
@@ -180,4 +186,36 @@
 			
 
 	</body>
+
+<script>
+$(function(){
+	var submitChk = false;
+	$('#joinBtn').attr('disabled',true);
+	
+	$('#idChkBtn').click(function(){
+		var userId = $('#userId').val();
+		$.ajax({
+			url:'/Healthy_drugger_new/idCheck',
+			data:{'user_id':userId},
+			async:false,
+			success:function(data){
+				var result = data;
+				if(result){
+					submitChk = true;
+					$('#joinBtn').removeAttr('disabled');
+					alert('사용 가능한 ID입니다.');
+				}else{
+					submitChk = false;
+					$('#joinBtn').attr('disabled',true);
+					alert('사용 불가능한 ID입니다.');
+				}
+			}
+		})
+	});
+	
+})
+</script>
+	
+	
+	
 </html>
