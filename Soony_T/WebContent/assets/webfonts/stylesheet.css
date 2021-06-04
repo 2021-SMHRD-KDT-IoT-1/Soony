@@ -1,0 +1,96 @@
+@font-face {
+    font-family: '210 Ssiat B';
+    src: url('TTSsiatB.eot');
+    src: url('TTSsiatB.eot?#iefix') format('embedded-opentype'),
+        url('TTSsiatB.woff2') format('woff2'),
+        url('TTSsiatB.woff') format('woff'),
+        url('TTSsiatB.svg#TTSsiatB') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '210 Ssiat L';
+    src: url('TTSsiatL.eot');
+    src: url('TTSsiatL.eot?#iefix') format('embedded-opentype'),
+        url('TTSsiatL.woff2') format('woff2'),
+        url('TTSsiatL.woff') format('woff'),
+        url('TTSsiatL.svg#TTSsiatL') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '210 Bameuihaebyun R';
+    src: url('TTBameuihaebyunR.eot');
+    src: url('TTBameuihaebyunR.eot?#iefix') format('embedded-opentype'),
+        url('TTBameuihaebyunR.woff2') format('woff2'),
+        url('TTBameuihaebyunR.woff') format('woff'),
+        url('TTBameuihaebyunR.svg#TTBameuihaebyunR') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '210 Ssiat R';
+    src: url('TTSsiatR.eot');
+    src: url('TTSsiatR.eot?#iefix') format('embedded-opentype'),
+        url('TTSsiatR.woff2') format('woff2'),
+        url('TTSsiatR.woff') format('woff'),
+        url('TTSsiatR.svg#TTSsiatR') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BM EULJIRO TTF';
+    src: url('BMEULJIROTTF.eot');
+    src: url('BMEULJIROTTF.eot?#iefix') format('embedded-opentype'),
+        url('BMEULJIROTTF.woff2') format('woff2'),
+        url('BMEULJIROTTF.woff') format('woff'),
+        url('BMEULJIROTTF.svg#BMEULJIROTTF') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url('Jalnan.eot');
+    src: url('Jalnan.eot?#iefix') format('embedded-opentype'),
+        url('Jalnan.woff2') format('woff2'),
+        url('Jalnan.woff') format('woff'),
+        url('Jalnan.svg#Jalnan') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BM JUA';
+    src: url('BMJUA.eot');
+    src: url('BMJUA.eot?#iefix') format('embedded-opentype'),
+        url('BMJUA.woff2') format('woff2'),
+        url('BMJUA.woff') format('woff'),
+        url('BMJUA.svg#BMJUA') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DX';
+    src: url('DXHanlgrum-KSCpc-EUC-H.eot');
+    src: url('DXHanlgrum-KSCpc-EUC-H.eot?#iefix') format('embedded-opentype'),
+        url('DXHanlgrum-KSCpc-EUC-H.woff2') format('woff2'),
+        url('DXHanlgrum-KSCpc-EUC-H.woff') format('woff'),
+        url('DXHanlgrum-KSCpc-EUC-H.svg#DXHanlgrum-KSCpc-EUC-H') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
