@@ -45,7 +45,7 @@ create sequence c_num
 start with 1 
 increment by 1
 
-
+select * from comm order by c_date desc
 
 CREATE TABLE faq ( 
 f_num NUMBER(10) PRIMARY KEY, 

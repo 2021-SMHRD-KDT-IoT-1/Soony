@@ -33,28 +33,23 @@
 					<!-- 상단바 Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="main.jsp">Home</a></li>
+								<li><a href="main.jsp">전체보기</a></li>
 								<li>
-									<a href="#">Dropdown</a>
+									<a href="#">유모차</a>
 									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">And a submenu &hellip;</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
+										<li><a href="#">유모차 등록</a></li>
+										<li><a href="#">지문 관리</a></li>
+										<li><a href="#">방범 알림</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="boardMain.jsp">자유게시판</a></li>
+								<li>
+									<a href="#">고객 지원</a>
+									<ul>
+										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
+										<li><a href="anqMain.jsp">QnA</a></li>
+									</ul>
+								</li>
 							</ul>
 						</nav>
 
@@ -135,10 +130,7 @@
 			</section>
 		</div>
 
-										<!-- top버튼 -->
-							<a id="toTop" href="#top">
-						 		<img src="images/top.png" width="60px" height="50px" alt="" >
-							</a>
+			
 			
 								<!-- Contact -->
 									<section class="contact">
@@ -180,7 +172,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/top.js"></script>
 
 	</body>
 </html>

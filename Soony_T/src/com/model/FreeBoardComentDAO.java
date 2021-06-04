@@ -53,14 +53,13 @@ public class FreeBoardComentDAO {
 
 			try {
 
-				String sql = "insert into comm values(?,½ÃÄö½º,?,?,sysdate)";
+				String sql = "insert into f_brd_cmt values(?,c_num.nextval,?,?,sysdate)";
 				psmt = conn.prepareStatement(sql);
 
 				psmt.setInt(1, dto.getBnum());
-				psmt.setInt(2, dto.getCnum());
-				psmt.setString(3, dto.getUsername());
-				psmt.setString(4, dto.getContent());
-				psmt.setString(5, dto.getDate());
+				psmt.setString(2, dto.getUsername());
+				psmt.setString(3, dto.getContent());
+				
 				
 
 				cnt = psmt.executeUpdate();
@@ -73,23 +72,26 @@ public class FreeBoardComentDAO {
 			return cnt;
 		}
 		
-		public ArrayList<FreeBoardComentDTO> FreeBoardComent() {
+		public ArrayList<FreeBoardComentDTO> FreeBoardComent(int num) {
+			ArrayList<FreeBoardComentDTO> list = new ArrayList<FreeBoardComentDTO>();
 			conn();
 			
 			try {
-				String sql = "select * from comm order by c_date desc";
+				String sql = "select * from f_brd_cmt where b_num = ? order by c_date desc ";
 				psmt = conn.prepareStatement(sql);
+				psmt.setInt(1, num);
 				
 				rs = psmt.executeQuery();
 				
 				while(rs.next()) {
 					
-					int num = rs.getInt(2);
+					int b_num = rs.getInt(1);
+					int c_num = rs.getInt(2);
 					String username = rs.getString(3);
 					String content = rs.getString(4);
 					String date = rs.getString(5);
 					
-					dto = new FreeBoardComentDTO(num, username, content, date);
+					dto = new FreeBoardComentDTO(b_num, c_num, username, content, date);
 							
 							
 					list.add(dto);

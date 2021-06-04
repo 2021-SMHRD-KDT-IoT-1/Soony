@@ -42,12 +42,12 @@
 										<li><a href="#">방범 알림</a></li>
 									</ul>
 								</li>
-								<li><a href="sidebar.jsp">자유게시판</a></li>
+								<li><a href="boardMain.jsp">자유게시판</a></li>
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>
-										<li><a href="sidebar.jsp">자주 묻는 질문</a></li>
-										<li><a href="sidebar.jsp">QnA</a></li>
+										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
+										<li><a href="anqMain.jsp">QnA</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -96,10 +96,7 @@
 
 				</div>
 
-										<!-- top버튼 -->
-							<a id="toTop" href="#top">
-						 		<img src="images/top.png" width="60px" height="50px" alt="" >
-							</a>
+			
 			
 								<!-- Contact -->
 									<section class="contact">
@@ -141,7 +138,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/top.js"></script>
 
 	</body>
 </html>
