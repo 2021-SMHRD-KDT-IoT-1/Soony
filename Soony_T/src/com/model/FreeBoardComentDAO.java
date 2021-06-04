@@ -109,7 +109,7 @@ public class FreeBoardComentDAO {
 			conn();
 
 			try {
-				String sql = "delete from comm where c_num = ? ";
+				String sql = "delete from f_brd_cmt where c_num = ? ";
 				psmt = conn.prepareStatement(sql);
 
 				psmt.setInt(1, dto.getCnum());

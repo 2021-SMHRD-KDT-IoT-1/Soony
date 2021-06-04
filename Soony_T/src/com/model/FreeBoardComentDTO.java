@@ -9,6 +9,10 @@ public class FreeBoardComentDTO {
 	 
 	
 	
+	public FreeBoardComentDTO(int cnum) {
+		super();
+		this.cnum = cnum;
+	}
 	public FreeBoardComentDTO(int bnum, String username, String content) {
 		super();
 		this.bnum = bnum;

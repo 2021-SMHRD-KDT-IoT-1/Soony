@@ -58,6 +58,7 @@
 	ArrayList<FreeBoardDTO> list = dao.FreeBoard();
 	//댓글
 	FreeBoardComentDAO daoc = new FreeBoardComentDAO();
+	
 	ArrayList<FreeBoardComentDTO> listco = daoc.FreeBoardComent(b_num);
 	System.out.println( listco.size());
 
@@ -180,10 +181,14 @@
 								<td><%=listco.get(i).getUsername()%></td>
 								<td><%=listco.get(i).getContent()%></td>
 								<td><%=listco.get(i).getDate()%></td>
-								<td><a href="FreeBoardDeleteComentCon">삭제</a> </td>
-								</tr>
+								<%if(dto.getNick().equals(listco.get(i).getUsername())) {%>
+								<td><a href="FreeBoardDeleteComentCon?c_num=<%=listco.get(i).getCnum() %>&b_num=<%=bdto.getNum()%>"> 삭제</a> </td>
 								<%} %>
+								<%} %>
+								</tr>
+								
 								</table>
+								
 								<form action="FreeBoardComentCon?b_num=<%=bdto.getNum() %>" method="post">
 								<ul>
 								<ul>
