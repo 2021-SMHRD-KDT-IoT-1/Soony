@@ -77,7 +77,7 @@ public class FreeBoardComentDAO {
 			conn();
 			
 			try {
-				String sql = "select * from f_brd_cmt where b_num = ? order by c_date desc ";
+				String sql = "select * from f_brd_cmt where b_num = ? order by c_date ";
 				psmt = conn.prepareStatement(sql);
 				psmt.setInt(1, num);
 				
