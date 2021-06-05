@@ -24,7 +24,7 @@
 		text-align : right;
 		margin-right: 50px;
 		margin-bottom: 3px;
-		} 
+		}
 		#nav > div > button{
 		width: 100px;
 		padding-left: 0px;
@@ -81,8 +81,8 @@
 					     <button><a href="userinfo.jsp">회원정보</a></button>
 					    <%}else{ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
-					    <button><a href="update.jsp">개인정보수정</a></button>
-					    <button><a href="delete.jsp">회원탈퇴</a></button>
+					    
+					    <button><a href="mypage.jsp">마이페이지</a></button>
 					    <%} %>
 					    <%}else{ %>
 					   <button><a href="login.jsp">로그인</a></button>

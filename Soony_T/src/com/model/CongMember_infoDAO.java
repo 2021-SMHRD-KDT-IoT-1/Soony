@@ -161,6 +161,40 @@ public class CongMember_infoDAO {
 		return list;
 	}
 
+	public ArrayList<CongMember_infoDTO> oneselect(String userid) {
+
+		list = new ArrayList<CongMember_infoDTO>();
+
+		conn();
+
+		try {
+			String sql = "select * from mbr_info where id = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, userid);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				String id = rs.getString(1);
+				String pw = rs.getString(2);
+				String name = rs.getString(3);
+				String tel = rs.getString(4);
+				String email = rs.getString(5);
+				String nick = rs.getString(6);
+
+				dto = new CongMember_infoDTO(id, pw, name, tel, email, nick);
+				list.add(dto);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return list;
+	}
+
+	
 	public int delete(CongMember_infoDTO dto) {
 
 		conn();

@@ -64,15 +64,15 @@
 						<nav id="nav" style="padding: 2em 0 1.5em 0;">
 						
 					    <div>
-					    <%if(dto != null){ %>
+					   <%if(dto != null){ %>
 					    
 					     <%if(dto.getId().equals("admin")){ %>
 					     <button><a href="LogoutCon">로그아웃</a></button>
 					     <button><a href="userinfo.jsp">회원정보</a></button>
 					    <%}else{ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
-					    <button><a href="update.jsp">개인정보수정</a></button>
-					    <button><a href="delete.jsp">회원탈퇴</a></button>
+					    
+					    <button><a href="mypage.jsp">마이페이지</a></button>
 					    <%} %>
 					    <%}else{ %>
 					   <button><a href="login.jsp">로그인</a></button>
