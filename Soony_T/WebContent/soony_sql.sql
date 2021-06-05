@@ -10,11 +10,26 @@ nick VARCHAR2(50) );
 
 CREATE TABLE str_cr ( 
 str_num VARCHAR2(50) PRIMARY KEY, 
-fng VARCHAR2(1000), 
-alr NUMBER(10),
 id VARCHAR2(50),
 CONSTRAINT mbr_info_FK_id FOREIGN KEY(id) REFERENCES mbr_info(id) ON DELETE CASCADE);
 
+CREATE TABLE alr (
+alr_num NUMBER(10),
+sys_date date
+);
+
+create sequence alr_num 
+start with 1 
+increment by 1;
+
+CREATE TABLE fng(
+fng_num NUMBER(20),
+fng_name VARCHAR2(10)
+);
+
+create sequence fng_num
+start with 1
+increment by 1;
 
 
 CREATE TABLE f_brd ( 
@@ -29,9 +44,8 @@ b_photo VARCHAR2(100));
 
 create sequence b_num 
 start with 1 
-increment by 1
+increment by 1;
 
-select * from f_brd
 
 CREATE TABLE f_brd_cmt ( 
 b_num NUMBER(10), 
@@ -43,9 +57,8 @@ CONSTRAINT f_brd_cmt_FK_b_num FOREIGN KEY(b_num) REFERENCES f_brd(b_num) ON DELE
 
 create sequence c_num 
 start with 1 
-increment by 1
+increment by 1;
 
-select * from comm order by c_date desc
 
 CREATE TABLE faq ( 
 f_num NUMBER(10) PRIMARY KEY, 
@@ -56,7 +69,7 @@ f_img VARCHAR2(2000));
 
 create sequence f_num
 start with 1
-increment by 1
+increment by 1;
 
 
 CREATE TABLE qna ( 
@@ -70,7 +83,7 @@ q_date DATE );
 
 create sequence q_num
 start with 1
-increment by 1
+increment by 1;
 
 
 CREATE TABLE rqna(
@@ -85,7 +98,7 @@ CREATE TABLE rqna(
 
 create sequence rq_num
 start with 1
-increment by 1 
+increment by 1; 
 
 
 select*from mbr_info;
@@ -97,7 +110,7 @@ select*from qna;
 select*from rqna;
 
 
-
+/*
 drop table str_cr;
 drop table f_brd_cmt;
 drop table faq;
@@ -105,12 +118,16 @@ drop table rqna;
 drop table mbr_info;
 drop table f_brd;
 drop table qna; 
+drop table fng;
+drop table alr;
 
-drop sequence b_num
-drop sequence c_num
-drop sequence f_num
-drop sequence q_num
-drop sequence rq_num
+drop sequence b_num;
+drop sequence c_num;
+drop sequence f_num;
+drop sequence q_num;
+drop sequence rq_num;
+drop sequence fng_num;
+drop sequence alr_num;
                              */
 
 
