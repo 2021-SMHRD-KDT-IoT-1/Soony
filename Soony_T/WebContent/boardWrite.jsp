@@ -9,7 +9,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Helios by HTML5 UP</title>
+		<title>자유게시판</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
@@ -87,7 +87,7 @@
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>
-										<li><a href="sidebar.jsp">자주 묻는 질문</a></li>
+										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
 										<li><a href="qnaMain.jsp">QnA</a></li>
 									</ul>
 								</li>
