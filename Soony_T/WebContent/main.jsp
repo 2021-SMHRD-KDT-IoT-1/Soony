@@ -65,16 +65,14 @@
 						
 					    <div>
 					   <%if(dto != null){ %>
-					    
 					     <%if(dto.getId().equals("admin")){ %>
 					     <button><a href="LogoutCon">로그아웃</a></button>
 					     <button><a href="userinfo.jsp">회원정보</a></button>
 					    <%}else{ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
-					    
 					    <button><a href="mypage.jsp">마이페이지</a></button>
-					    <%} %>
-					    <%}else{ %>
+					    <%}%>
+					    <%}else{%>
 					   <button><a href="login.jsp">로그인</a></button>
 					   <button><a href="join.jsp" >회원가입</a></button>
 					    <%} %>
@@ -86,7 +84,7 @@
 								<li>
 									<a href="#">유모차</a>
 									<ul>
-										<li><a href="#">유모차 등록</a></li>
+										<li><a href="stroller.jsp">유모차 등록</a></li>
 										<li><a href="#">지문 관리</a></li>
 										<li><a href="#">방범 알림</a></li>
 									</ul>

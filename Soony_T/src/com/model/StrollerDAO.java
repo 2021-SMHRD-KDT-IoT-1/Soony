@@ -7,13 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class FingerPrintDAO {
+public class StrollerDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	int cnt = 0;
-	FingerPrintDTO dto = null;
+	StrollerDTO dto = null;
 	ResultSet rs = null; 
-	ArrayList<FingerPrintDTO> list = null;
+	ArrayList<StrollerDTO> list = null;
 
 	public void conn() {
 
@@ -48,19 +48,17 @@ public class FingerPrintDAO {
 	}
 
 	// Enrollment 등록한다는 뜻 ^^
-	public int Enrollment(FingerPrintDTO dto) {
+	public int Enrollment(StrollerDTO dto) {
 
 		conn();
 
 		try {
 
-			String sql = "insert into str_cr values(?,?,?,?)";
+			String sql = "insert into str_cr values(?,?)";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getStr_num());
-			psmt.setString(2, dto.getFng());
-			psmt.setInt(3, dto.getAlr());
-			psmt.setString(4, dto.getId());
+			psmt.setString(2, dto.getId());
 
 			cnt = psmt.executeUpdate();
 
@@ -72,25 +70,5 @@ public class FingerPrintDAO {
 		return cnt;
 	}
 
-	public int delete(FingerPrintDTO dto) {
-
-		conn();
-
-		try {
-			String sql = "delete from str_cr where fng = ? ";
-			psmt = conn.prepareStatement(sql);
-
-			psmt.setString(1, dto.getFng());
-			
-
-			cnt = psmt.executeUpdate();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close();
-		}
-		return cnt;
-
-	}
+	
 }
