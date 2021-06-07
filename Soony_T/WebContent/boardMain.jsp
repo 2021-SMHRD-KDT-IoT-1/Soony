@@ -1,8 +1,8 @@
 <%@page import="com.model.FreeBoardDTO"%>
-<%@page import="com.model.FreeBoardDAO"%>
+<%@page import="com.model.FreeBoardDAO"%> 
 <%@page import="com.model.QNADTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.model.QNADAO"%>
+<%@page import="com.model.QNADAO"%> 
 <%@page import="com.model.CongMember_infoDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>

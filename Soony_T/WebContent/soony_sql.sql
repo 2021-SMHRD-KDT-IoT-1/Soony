@@ -148,12 +148,3 @@ drop sequence alr_num;
                             
 
 
-create table senser (
-
-value_n VARCHAR2(1000)
-
-);
-
-select*from  senser;
-
-drop table senser;
