@@ -2590,9 +2590,9 @@ input, select, textarea {
 		.carousel article {
 			display: inline-block;
 			width: 18em;
-			background: #fff;
+			
 			text-align: center;
-			padding: 0 1em 3em 1em;
+			padding: 0 1em 0 1em;
 			margin: 0 2em 0 0;
 			white-space: normal;
 			opacity: 1.0;
@@ -2609,7 +2609,7 @@ input, select, textarea {
 			.carousel article .image {
 				position: relative;
 				left: -1em;
-				top: 0;
+				top: 2em;
 				width: auto;
 				margin-right: -2em;
 				margin-bottom: 3em;
@@ -2618,6 +2618,7 @@ input, select, textarea {
 			.carousel article p {
 				text-align: center;
 			}
+
 
 /* Wide */
 

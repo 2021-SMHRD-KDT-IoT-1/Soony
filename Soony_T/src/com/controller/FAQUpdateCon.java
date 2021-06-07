@@ -25,50 +25,22 @@ public class FAQUpdateCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("euc-kr");
-		response.setContentType("text/html; charset=EUC-KR");
-
-		// 웹 서버 컨테이너 경로
-		String root = request.getSession().getServletContext().getRealPath("/uploadFAQ");
-		File folder = new File(root);
-		if (!folder.exists()) {
-			folder.mkdir();
-		}
-
-		// 이미지 크기 지정
-		int size = 1024 * 1024 * 10; // 10MB
-
-		// 사진이름 인코딩 설정
-		String encoding = "EUC-KR";
-		
-		// cos.jar 파일안에 있는 클래스 사용
-		// 요청, 저장경로, 사이즈 최대크기, 인코딩 방식, DefaultFileRenamePolicy : 이미지 파일 중복제거
-		MultipartRequest multi = new MultipartRequest(request, root, size, encoding,
-				new DefaultFileRenamePolicy());
-		
-		Enumeration files = multi.getFileNames();
-		String str = (String) files.nextElement();
-
-		String uploadPath = root + File.separator + multi.getFilesystemName(str);
+		request.setCharacterEncoding("EUC-KR");
 
 		HttpSession session = request.getSession();
 		
 		CongMember_infoDTO info = (CongMember_infoDTO) session.getAttribute("Ldto");
 
-		
-		
 		// 데이터 베이스에 저장하기위해서 fileName, title, content 등의 정보 가져오기
-		String title = multi.getParameter("title");
-		String file = URLEncoder.encode(multi.getFilesystemName("file"), "EUC-KR");
-		String content = multi.getParameter("content");
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
 		int num = Integer.parseInt(request.getParameter("f_num"));
 
 		System.out.println(title);
-		System.out.println(file);
 		System.out.println(content);
 		System.out.println(num);
 		
-		FAQDTO dto = new FAQDTO(num, title, content, file);
+		FAQDTO dto = new FAQDTO(num, title, content);
 		FAQDAO dao = new FAQDAO();
 		
 		int cnt = dao.update(dto);

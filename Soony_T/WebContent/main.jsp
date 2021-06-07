@@ -52,7 +52,7 @@
 							<header>
 								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
 								<hr />
-								<p>Another fine freebie by HTML5 UP</p>
+								<p>소중한 순간을 더욱 편하고 안전하게</p>
 							</header>
 							<footer>
 								<a href="#banner" class="button circled scrolly">Start</a>
@@ -65,16 +65,14 @@
 						
 					    <div>
 					   <%if(dto != null){ %>
-					    
 					     <%if(dto.getId().equals("admin")){ %>
 					     <button><a href="LogoutCon">로그아웃</a></button>
 					     <button><a href="userinfo.jsp">회원정보</a></button>
 					    <%}else{ %>
 					    <button><a href="LogoutCon">로그아웃</a></button>
-					    
 					    <button><a href="mypage.jsp">마이페이지</a></button>
-					    <%} %>
-					    <%}else{ %>
+					    <%}%>
+					    <%}else{%>
 					   <button><a href="login.jsp">로그인</a></button>
 					   <button><a href="join.jsp" >회원가입</a></button>
 					    <%} %>
@@ -86,9 +84,9 @@
 								<li>
 									<a href="#">유모차</a>
 									<ul>
-										<li><a href="#">유모차 등록</a></li>
-										<li><a href="#">지문 관리</a></li>
-										<li><a href="#">방범 알림</a></li>
+										<li><a href="stroller.jsp">유모차 등록</a></li>
+										<li><a href="fngView.jsp">지문 관리</a></li>
+										<li><a href="alarm.jsp">방범 알림</a></li>
 									</ul>
 								</li>
 								<li><a href="boardMain.jsp">자유게시판</a></li>
@@ -115,89 +113,50 @@
 					</header>
 				</section>
 
-			<!-- Carousel -->
+				<!-- 제품설명 및 후가 Carousel -->
 				<section class="carousel">
 					<div class="reel">
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/u1.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/u5.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/u3.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/u4.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/u2.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/re1.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/re2.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/re3.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/re4.png" alt="" /></a>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+							<a href="#" class="image featured"><img src="images/re5.png" alt="" /></a>
 						</article>
+
 
 					</div>
 				</section>

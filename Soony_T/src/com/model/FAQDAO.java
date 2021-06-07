@@ -54,12 +54,11 @@ public class FAQDAO {
 
 		try {
 
-			String sql = "insert into faq values(f_num.nextval,?,?,?)";
+			String sql = "insert into faq values(f_num.nextval,?,?)";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getTitle());
 			psmt.setString(2, dto.getContent());
-			psmt.setString(3, dto.getImg());
 
 			cnt = psmt.executeUpdate();
 
@@ -87,10 +86,9 @@ public class FAQDAO {
 				int num = rs.getInt(1);
 				String title = rs.getString(2);
 				String content = rs.getString(3);
-				String img = rs.getString(4);
 				
 
-				dto = new FAQDTO(num, title, content, img);
+				dto = new FAQDTO(num, title, content);
 				list.add(dto);
 			}
 
@@ -120,10 +118,9 @@ public class FAQDAO {
 					int num = rs.getInt(1);
 					String title = rs.getString(2);
 					String content = rs.getString(3);
-					String img = rs.getString(4);
 					
 					
-					dto = new FAQDTO(num, title, content, img);
+					dto = new FAQDTO(num, title, content);
 				}
 				
 			} catch (SQLException e) {
@@ -161,13 +158,12 @@ public class FAQDAO {
 		conn();
 
 		try {
-			String sql = "update faq set f_title = ?, f_content = ?, f_img = ? where f_num = ?";
+			String sql = "update faq set f_title = ?, f_content = ? where f_num = ?";
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getTitle());
 			psmt.setString(2, dto.getContent());
-			psmt.setString(3, dto.getImg());
-			psmt.setInt(4, dto.getNum());
+			psmt.setInt(3, dto.getNum());
 			
 
 			cnt = psmt.executeUpdate();

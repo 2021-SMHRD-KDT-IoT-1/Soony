@@ -14,7 +14,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Helios by HTML5 UP</title>
+		<title>Q&A</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
@@ -66,7 +66,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">Helios</a></h1>
+								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
 							</header>
 						</div>
 
@@ -96,9 +96,9 @@
 								<li>
 									<a href="#">유모차</a>
 									<ul>
-										<li><a href="#">유모차 등록</a></li>
-										<li><a href="#">지문 관리</a></li>
-										<li><a href="#">방범 알림</a></li>
+										<li><a href="stroller.jsp">유모차 등록</a></li>
+										<li><a href="fngView.jsp">지문 관리</a></li>
+										<li><a href="alarm.jsp">방범 알림</a></li>
 									</ul>
 								</li>
 								<li><a href="boardMain.jsp">자유게시판</a></li>

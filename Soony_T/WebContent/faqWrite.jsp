@@ -9,7 +9,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Helios by HTML5 UP</title>
+		<title>FAQ 관리자페이지</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
@@ -48,7 +48,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">Helios</a></h1>
+								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
 							</header>
 						</div>
 
@@ -78,9 +78,9 @@
 								<li>
 									<a href="#">유모차</a>
 									<ul>
-										<li><a href="#">유모차 등록</a></li>
-										<li><a href="#">지문 관리</a></li>
-										<li><a href="#">방범 알림</a></li>
+										<li><a href="stroller.jsp">유모차 등록</a></li>
+										<li><a href="fngView.jsp">지문 관리</a></li>
+										<li><a href="alarm.jsp">방범 알림</a></li>
 									</ul>
 								</li>
 								<li><a href="boardMain.jsp">자유게시판</a></li>
@@ -103,13 +103,11 @@
 						<article id="main" class="special">
 							<header>
 								<h2><a href="#">FAQ 작성하기</a></h2>
-								<p>
-									Morbi convallis lectus malesuada sed fermentum dolore amet
-								</p>
+								
 							</header>
 							
 							<div id = "board">
-								<form action="FAQWriteCon" method="post" enctype="multipart/form-data">
+								<form action="FAQWriteCon" method="post">
 								<table width="700" border="3" bordercolor="lightgray" align="center">
 				    			    <tr height=70>
 				           				<td id="title" width=80 style="word-break:break-all">제 목</td>
@@ -119,10 +117,7 @@
 				            			<td id="title" width=80 style="word-break:break-all">내 용</td>
 				            			<td><textarea name="content" cols="72" rows="20"></textarea></td>        
 				        			</tr>
-				        			<tr>
-				            			<td id="title" width=100 style="word-break:break-all"> 파일첨부</td>
-				            			<td><input type="file" name="file" /></td>    
-				        			</tr>
+				        			
 				      			</table>
 				 
 					       	 	<div align="center">
