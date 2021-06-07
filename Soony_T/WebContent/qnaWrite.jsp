@@ -87,7 +87,7 @@
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>
-										<li><a href="sidebar.jsp">자주 묻는 질문</a></li>
+										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
 										<li><a href="qnaMain.jsp">QnA</a></li>
 									</ul>
 								</li>
@@ -103,9 +103,7 @@
 						<article id="main" class="special">
 							<header>
 								<h2><a href="#">Q&A 작성하기</a></h2>
-								<p>
-									Morbi convallis lectus malesuada sed fermentum dolore amet
-								</p>
+								
 							</header>
 							
 							<div id = "board">

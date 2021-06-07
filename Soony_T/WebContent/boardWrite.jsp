@@ -103,9 +103,7 @@
 						<article id="main" class="special">
 							<header>
 								<h2><a href="#">자유게시판 작성하기</a></h2>
-								<p>
-									Morbi convallis lectus malesuada sed fermentum dolore amet
-								</p>
+								
 							</header>
 							
 							<div id = "board">

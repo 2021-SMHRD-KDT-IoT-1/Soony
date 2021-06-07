@@ -12,7 +12,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - Helios by HTML5 UP</title>
+		<title>Q&A</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
@@ -113,9 +113,7 @@
 						<article id="main" class="special">
 							<header>
 								<h2><a href="#">Q&A</a></h2>
-								<p>
-									Morbi convallis lectus malesuada sed fermentum dolore amet
-								</p>
+								
 							</header>
 							
 							<!-- QnAƲ -->

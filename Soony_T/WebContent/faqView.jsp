@@ -122,9 +122,7 @@
 						<article id="main" class="special">
 							<header>
 								<h2><a href="#">FAQ</a></h2>
-								<p>
-									Morbi convallis lectus malesuada sed fermentum dolore amet
-								</p>
+								
 							</header>
 							
 							<!-- QnAViewÆ² ½ÃÀÛ-->
