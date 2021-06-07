@@ -142,9 +142,11 @@
 										<td colspan="2">³»¿ë</td>
 									</tr>
 									<tr>
-										<td colspan="2"><img src="uploadFAQ/<%= bdto.getImg() %>"><br>
+										<td colspan="2"><br>
 									
-										<%= bdto.getContent() %></td>
+										<%= bdto.getContent() %>
+										<br><br><br>
+										</td>
 										
 									</tr>
 									<tr>

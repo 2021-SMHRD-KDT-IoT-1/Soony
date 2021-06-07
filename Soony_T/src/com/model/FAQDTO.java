@@ -4,7 +4,7 @@ public class FAQDTO {
 	private int num; 
 	private String title;
 	private String content;
-	private String img;
+	
 	
 	
 	
@@ -13,20 +13,20 @@ public class FAQDTO {
 		this.num = num;
 	}
 
-	public FAQDTO( String title, String content, String img) {
+	public FAQDTO(String title, String content) {
 		super();
 		
 		this.title = title;
 		this.content = content;
-		this.img = img;
+		
 	}
 	
-	public FAQDTO(int num, String title, String content, String img) {
+	public FAQDTO(int num, String title, String content) {
 		super();
 		this.num = num;
 		this.title = title;
 		this.content = content;
-		this.img = img;
+	
 	}
 
 	public int getNum() {
@@ -53,13 +53,6 @@ public class FAQDTO {
 		this.content = content;
 	}
 
-	public String getImg() {
-		return img;
-	}
-
-	public void setImg(String img) {
-		this.img = img;
-	}
 	
 	
 }

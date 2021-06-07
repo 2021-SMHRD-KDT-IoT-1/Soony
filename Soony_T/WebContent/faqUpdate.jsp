@@ -113,7 +113,7 @@
 							</header>
 							
 							<div id = "board">
-								<form action="FAQUpdateCon?f_num=<%= f_num %>" method="post" enctype="multipart/form-data">
+								<form action="FAQUpdateCon?f_num=<%= f_num %>" method="post" >
 								<table width="700" border="3" bordercolor="lightgray" align="center">
 				    			    <tr height=70>
 				      		      		<td id="title" width=80 style="word-break:break-all">작성자</td>
@@ -127,10 +127,7 @@
 				            			<td id="title" width=80 style="word-break:break-all">내 용</td>
 				            			<td><textarea name="content" cols="72" rows="20"></textarea></td>        
 				        			</tr>
-				        			<tr>
-				            			<td id="title" width=100 style="word-break:break-all"> 파일첨부</td>
-				            			<td><input type="file" name="file" /></td>    
-				        			</tr>
+				        			
 				      			</table>
 				 
 					       	 	<div align="center">

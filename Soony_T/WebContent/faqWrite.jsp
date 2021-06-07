@@ -109,7 +109,7 @@
 							</header>
 							
 							<div id = "board">
-								<form action="FAQWriteCon" method="post" enctype="multipart/form-data">
+								<form action="FAQWriteCon" method="post">
 								<table width="700" border="3" bordercolor="lightgray" align="center">
 				    			    <tr height=70>
 				           				<td id="title" width=80 style="word-break:break-all">力 格</td>
@@ -119,10 +119,7 @@
 				            			<td id="title" width=80 style="word-break:break-all">郴 侩</td>
 				            			<td><textarea name="content" cols="72" rows="20"></textarea></td>        
 				        			</tr>
-				        			<tr>
-				            			<td id="title" width=100 style="word-break:break-all"> 颇老梅何</td>
-				            			<td><input type="file" name="file" /></td>    
-				        			</tr>
+				        			
 				      			</table>
 				 
 					       	 	<div align="center">
