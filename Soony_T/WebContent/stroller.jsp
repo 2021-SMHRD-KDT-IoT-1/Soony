@@ -114,7 +114,7 @@
 						<table>
 							<tr>
 								<td>유모차 고유번호</td>
-								<td><input type="text" placeholder="고유번호 입력" name="str_num" ></td>
+								<td><input type="text" placeholder="고유번호 입력" name="str_num" id="str_num" ></td>
 							</tr>
 						
 						<!-- 행과 행사이 칸 띄우기 -->
@@ -124,7 +124,7 @@
 						</table>
 						<br><br>
 						<div align="center">
-						<input type="submit" value="입력완료" class="button">
+						<input type="button" value="입력완료" class="button" onclick="numCheck()">
 					</div>
 				</form>
 			</div>
@@ -183,6 +183,44 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/top.js"></script>
+						
+			<script type="text/javascript">
+	
+		
+			// 정보 보내고 받기
+			// ajax 인코딩이 UTF-8에 주위해야함
+			function numCheck() {
+	
+				// input에 있는 정보 가져와서 변수에 저장
+				let str_num = $('#str_num').val();
+	
+	
+				// ajax 실행 부분
+				$.ajax({
+					url : 'StrollerCheck',
+					type : 'post',
+					data : {
+						'str_num' : str_num
+					},
+					success : function(data) {
+	
+						alert('조회 성공!!');
+						if (data == 'true') {
+							alert('유모차 고유번호 등록 성공');
+						}else{
+							alert('유모차 번호가 중복됩니다!');								
+						}
+						
+						//location.window.href = "main.jsp";
+					},
+					error : function() {
+						alert('조회 실패');
+					}
+				});
+	
+			}
+			
+			</script>
 			
 
 	</body>

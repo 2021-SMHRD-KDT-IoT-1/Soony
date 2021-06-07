@@ -17,20 +17,24 @@ public class idCheck extends HttpServlet {
     
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("euc-kr");
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		
 		PrintWriter out = response.getWriter();
 
-		String id = request.getParameter("user_id");
+		String id = request.getParameter("userId");
+		System.out.println(id);
 		
 		CongMember_infoDAO dao = new CongMember_infoDAO();
 		
+		
+		
 		if (dao.idCheck(id)) {
 			System.out.println("false");
+			out.print("false");
 		}else {
 			System.out.println("true");
-			out.println("OK");
-			out.flush();
+			out.print("true");
 		}
 	}
 

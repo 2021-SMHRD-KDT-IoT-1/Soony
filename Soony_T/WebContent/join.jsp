@@ -80,7 +80,7 @@
 							<td>아이디</td>
 							<td>
 								<input id="userId" type="text"  placeholder="ID를 입력하세요" name = "id" style="width:calc( 100% / 2); display:inline-block;">
-								<input id="idChkBtn" type="button" value="중복확인">
+								<input id="idChkBtn" type="button" value="중복확인" onclick="idCheck()">
 							</td>
 						</tr>
 						
@@ -183,7 +183,45 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/top.js"></script>
+
+
+			<script type="text/javascript">
 			
+			
+				// 정보 보내고 받기
+				// ajax 인코딩이 UTF-8에 주위해야함
+				function idCheck() {
+		
+					// input에 있는 정보 가져와서 변수에 저장
+
+					let userId = $('#userId').val();
+		
+					console.log(userId);
+					
+					// ajax 실행 부분
+					$.ajax({
+						url : 'idCheck',
+						type : 'post',
+						data : {
+							'userId' : userId
+							},
+						success : function(data) {
+
+							alert('조회 성공!!');
+							if (data == 'false') {
+								alert('사용할수 없는 아이디 입니다.');
+							}else{
+								alert('사용 가능한 아이디 입니다.');								
+							}
+						},
+						error : function() {
+							alert('조회 실패');
+						}
+					});
+		
+				}
+				
+				</script>
 
 	</body>
 

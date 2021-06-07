@@ -53,14 +53,27 @@ public class StrollerDAO {
 		conn();
 
 		try {
-
-			String sql = "insert into str_cr values(?,?)";
+			
+			
+			String sql = "select * from str_cr where str_num = ?";
+					
 			psmt = conn.prepareStatement(sql);
 
 			psmt.setString(1, dto.getStr_num());
-			psmt.setString(2, dto.getId());
 
-			cnt = psmt.executeUpdate();
+			rs = psmt.executeQuery();
+			
+			if (!rs.next()) {
+				
+				sql = "insert into str_cr values(?,?)";
+				psmt = conn.prepareStatement(sql);
+				
+				psmt.setString(1, dto.getStr_num());
+				psmt.setString(2, dto.getId());
+				
+				cnt = psmt.executeUpdate();
+			}
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
