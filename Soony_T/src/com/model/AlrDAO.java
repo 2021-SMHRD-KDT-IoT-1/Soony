@@ -47,14 +47,12 @@ public class AlrDAO {
 		}
 	}
 	
-	public int count(AlrDTO dto) {
+	public int count() {
 		conn();
 		
 		try {
-			String sql = "insert into alr values(?,?)";
+			String sql = "insert into alr values(alr_num.nextval,sysdate)";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, dto.getAlr_num());
-			psmt.setString(2, dto.getSys_date());
 			
 			cnt = psmt.executeUpdate();
 		} catch (SQLException e) {
