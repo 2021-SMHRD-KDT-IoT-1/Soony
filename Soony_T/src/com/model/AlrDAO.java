@@ -69,7 +69,7 @@ public class AlrDAO {
 		ArrayList<AlrDTO> list = new ArrayList<AlrDTO>();
 		conn();
 		try {
-			String sql = "select * from alr order by sys_date";
+			String sql = "select * from alr order by sys_date desc";
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
 			
