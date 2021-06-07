@@ -54,9 +54,9 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">Helios</a></h1>
+								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
 								<hr />
-								<p>Another fine freebie by HTML5 UP</p>
+								<p>소중한 순간을 더욱 편하고 안전하게</p>
 							</header>
 						
 						</div>
