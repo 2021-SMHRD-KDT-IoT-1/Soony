@@ -86,7 +86,7 @@
 									<ul>
 										<li><a href="stroller.jsp">유모차 등록</a></li>
 										<li><a href="fngView.jsp">지문 관리</a></li>
-										<li><a href="#">방범 알림</a></li>
+										<li><a href="alarm.jsp">방범 알림</a></li>
 									</ul>
 								</li>
 								<li><a href="boardMain.jsp">자유게시판</a></li>
