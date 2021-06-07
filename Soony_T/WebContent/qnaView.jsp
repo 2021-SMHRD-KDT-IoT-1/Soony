@@ -183,7 +183,7 @@
 								</tr>
 								
 								</table>
-								
+								<%if(dto.getId().equals("admin")) {%>
 								<form action="QnaBoardComentCon?q_num=<%=qdto.getQ_num() %>" method="post">
 								<ul>
 								<ul>
@@ -195,6 +195,7 @@
 								</ul>
 								</ul>
 								</form>
+								<%} %>
 							</div>
 							<!-- QnAviewÆ² ³¡ -->
 						</article>
