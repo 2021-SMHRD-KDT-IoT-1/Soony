@@ -12,12 +12,19 @@
 <body>
 
 	<%
-	String a = request.getParameter("cmd");
+	AlrDAO dao = new AlrDAO();
+	ArrayList<AlrDTO> list = new ArrayList<AlrDTO>();
+	
+	list = dao.showAlr();
+	System.out.print(list.size());
+	String a=request.getParameter("cmd");
+	if(a!=null&& a.equals("0")) { 
+		
 	System.out.println(a); 
 	
-	AlrDAO dao = new AlrDAO();
 	dao.count();
-	ArrayList<AlrDTO> list = dao.showAlr();
+	}
+	
 //	int sum = 0;
 	
 	%>
@@ -28,21 +35,19 @@
 				<td>번호</td>
 				<td>날짜</td>
 			</tr>
-			
-		
-		
-		<%
-		for(int i =0;i<list.size();i++){
+
+		<% for(int i =0;i<list.size();i++){
+			System.out.print(list.get(i).getAlr_num());
 		%>
 
 		<tr>
 			<td><%=list.get(i).getAlr_num()%></td>
 			<td><%=list.get(i).getSys_date()%></td>
-			<%
-				}
-			%>
-		
-		</tr> 
+			 
+		</tr>
+		<%
+		}
+			%> 
 	</table>
 
 	<a href="main.jsp"><button id="writer">홈으로가기</button></a>
