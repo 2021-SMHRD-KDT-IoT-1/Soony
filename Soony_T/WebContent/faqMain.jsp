@@ -30,7 +30,9 @@
 		padding-left: 0px;
 		padding-right: 0px;
 		}
-		
+		#list > tr > td {
+	text-align: center;
+}
 		</style>
 	</head>
 	
@@ -114,24 +116,24 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">FAQ</a></h2>
-								
+								<h2><a href="#">FAQ</a></h2><hr>
 							</header>
 							
 							<!-- QnA틀 -->
 							<div id="board">
 								<table id = "list">
 									<tr>
-										<td>번호</td>
-										<td>제목</td>
+										<td style="text-align: center;"><h3>번호</h3></td>
+										<td><h3>&nbsp;&nbsp;제목</h3><br><br></td>
 									</tr>
 									
 									<%for(int i=0; i<list.size();i++){ %>
 										<tr>
-											<td> <%=i+1 %> </td>
-											<td> <a href="faqView.jsp?f_num=<%= list.get(i).getNum() %>"><%=list.get(i).getTitle() %> </a></td>
+											<td style="text-align: center;"> <h3><%=i+1 %></h3> </td>
+											<td><a href="faqView.jsp?f_num=<%= list.get(i).getNum() %>"><p style="font-size: 40px;"><%=list.get(i).getTitle()%></p></a></td>
 										</tr>
 									<%} %>	
+									
 								</table>
 								<%if(dto.getId().equals("admin")) {%>
 								<a href="main.jsp"><button id="writer">홈으로가기</button></a>
@@ -142,7 +144,7 @@
 							</div>
 							<!-- QnA틀 끝 -->
 						</article>
-						<hr />
+						
 					</div>
 						<!-- top버튼 -->
 							<a id="toTop" href="#top">

@@ -33,7 +33,15 @@
 		padding-left: 0px;
 		padding-right: 0px;
 		}
-		
+		#yes{
+		margin-bottom:5px; 
+		padding-top: 0px; 
+		padding-bottom: 5px; 
+		padding-left : 10px;
+		padding-right : 10px;
+		text-align: center; 
+		height: 30px;
+		}
 		</style>
 	</head>
 	<%
@@ -150,6 +158,12 @@
 										<%= bdto.getContent() %></td>
 										
 									</tr>
+									<!--
+									<tr>
+									<td colspan="1"><input id= "yes" type="button" value="좋아요♥" onclick="like()"></td>
+									<td id="like_result">좋아요 : <%=bdto.getLike() %></td>
+								 	</tr>
+									-->
 									<tr>
 										<td colspan="2">
 										<%if(dto.getNick().equals(bdto.getUsername())) {%>
@@ -162,6 +176,7 @@
 										</td>
 									</tr>
 								</table>
+								<br>
 								<table>
 								
 								<tr>
@@ -361,6 +376,10 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/top.js"></script>
+			<script type="text/javascript">
+			
+			</script>
+			
 
 	</body>
 </html>

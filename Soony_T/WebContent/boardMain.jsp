@@ -115,7 +115,6 @@
 						<article id="main" class="special">
 							<header>
 								<h2><a href="#">자유게시판</a></h2>
-								
 							</header>
 							
 							<!-- QnA틀 -->

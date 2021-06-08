@@ -202,6 +202,14 @@ input, select, textarea {
 		border-top: solid 1px rgba(128, 128, 128, 0.2);
 		border-bottom: solid 1px rgba(128, 128, 128, 0.2);
 	}
+	#hr {
+	position: relative;
+		display: block;
+		border: solid 1px rgba(128, 128, 128, 0.2);
+		top: 1.5em;
+		margin-bottom: 2em;
+		
+	}
 
 		hr:before, hr:after {
 			content: '';
