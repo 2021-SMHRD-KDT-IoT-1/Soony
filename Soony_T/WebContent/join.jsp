@@ -70,7 +70,7 @@
 						</header>
 						
 						<section id="logmain">
-						<div style="width:500px; margin:auto" align="center">
+						<div style="width:700px; margin:auto" align="center">
 						
 						
 				<form action="JoinCon" method="post">
@@ -207,7 +207,6 @@
 							},
 						success : function(data) {
 
-							alert('조회 성공!!');
 							if (data == 'false') {
 								alert('사용할수 없는 아이디 입니다.');
 							}else{

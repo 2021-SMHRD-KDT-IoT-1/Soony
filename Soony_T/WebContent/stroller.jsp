@@ -204,7 +204,7 @@
 					},
 					success : function(data) {
 	
-						alert('조회 성공!!');
+						
 						if (data == 'true') {
 							alert('유모차 고유번호 등록 성공');
 						}else{
