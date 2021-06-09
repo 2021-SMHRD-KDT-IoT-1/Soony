@@ -19,43 +19,58 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<style type="text/css">
-		#nav > div {
-		text-align : right;
-		margin-right: 50px;
-		margin-bottom: 3px;
-		}
-		#nav > div > button{
-		width: 100px;
-		padding-left: 0px;
-		padding-right: 0px;
-		}
-		
-		</style>
-	</head>
+
+
+<style type="text/css">
+
+#nav>div {
+	text-align: right;
+	margin-right: 50px;
+	margin-bottom: 3px;
+}
+
+#nav>div>button {
+	width: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.title {
+    font-size: 22px;
+    padding: 20px;
+    background-color: #EDEDED;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid #F2F5F3;
+}
+
+
+</style>
+
+
+</head>
 	<%
-		CongMember_infoDTO dto = (CongMember_infoDTO)session.getAttribute("Ldto");
-		if( dto != null){
-			System.out.println("로그인 성공");
-			
-		}else{
-			
-			System.out.println("로그아웃 성공");
-		}
-	
+	CongMember_infoDTO dto = (CongMember_infoDTO) session.getAttribute("Ldto");
+	if (dto != null) {
+		System.out.println("로그인 성공");
+
+	} else {
+
+		System.out.println("로그아웃 성공");
+	}
+
 	//get방식으로 보낸 num 받아오기
 	int q_num = Integer.parseInt(request.getParameter("q_num"));
 	//Sting get_num = request.getParameter("get_num");
 	//int num = Integer.parseInt(num);
-	
+
 	QNADAO dao = new QNADAO();
 	QNADTO qdto = dao.showOne(q_num);
 	
-	
+
 	RQNADAO daor = new RQNADAO();
-	ArrayList<RQNADTO> listr = daor.QNAComent(q_num); 
-	
-%>
+	ArrayList<RQNADTO> listr = daor.QNAComent(q_num);
+	%>
 	
 	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
@@ -120,34 +135,31 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">Q&A 작성하기</a></h2>
-								<p>
-									Morbi convallis lectus malesuada sed fermentum dolore amet
-								</p>
+								<h2><a href="#">Q&A</a></h2>
+								<br>
+								
 							</header>
 							
 							<!-- QnAView틀 시작-->
-							<div id = "board">
-								<table id="list">
-									<tr>
-										<td>제목</td>
-										<td><%= qdto.getQ_title() %></td>
-									</tr>
-									<tr>
-										<td>작성자</td>
-										<td><%= qdto.getQ_username() %></td>
-									</tr>
-									<tr>
-										<td colspan="2">내용</td>
-									</tr>
-									<tr>
-										<td colspan="2">
-										<img src="upload/<%= qdto.getQ_img() %>"><br>
+							
+							<!-- 글 제목 -->
+							
+								<div class="title">
+									<h1>　<%= qdto.getQ_title() %></h1>
+								</div>
+								<div class="title">
+									<h1>　작성자 : <%= qdto.getQ_username() %>　　　　　　　　　　　작성일 : <%= qdto.getDate()%></h1>
+								</div>
+								
+							<!-- 글 내용 -->
+								<br><br>
+								<div align="center">
+									<img src="upload/<%= qdto.getQ_img() %>"><br>
 										<%= qdto.getQ_content() %>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2">
+								</div>
+								<br><br>
+											
+									<div align="center">
 										<%if(dto.getNick().equals(qdto.getQ_username())) {%>
 										<a href="qnaMain.jsp"><button>뒤로가기</button></a>
 										<a href="qnaUpdate.jsp?q_num=<%= qdto.getQ_num() %>"><button>수정하기</button></a>
@@ -155,9 +167,10 @@
 										<%} else{ %>
 										<a href="qnaMain.jsp"><button>뒤로가기</button></a>
 										<%} %>
-										</td>
-									</tr>
-								</table>
+									</div>	
+									<br><br>
+									
+							<!-- 답변 작성 -->		
 								
 								<table>
 								
@@ -217,16 +230,23 @@
 								<!-- Contact -->
 									<section class="contact">
 										<header>
-											<h3>(주) 콩순이 유모차 대표 : 김민지<br> 주소 : 광주 동구 예술길 31-15 3층 / 지능형 ioT 융합SW 전문가과정(NCS)</h3>
+											<h3>Nisl turpis nascetur interdum?</h3>
 										</header>
-										<p></p>
-										
+										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+										<ul class="icons">
+											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+										</ul>
 									</section>
 
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy;콩순이 유모차</li><li>Design: HTML5 UP && 김민지, 김선웅</li>
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 										</ul>
 									</div>
 
