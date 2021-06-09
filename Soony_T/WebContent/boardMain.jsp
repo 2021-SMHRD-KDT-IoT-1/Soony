@@ -19,8 +19,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-<style type="text/css">
+	<style type="text/css">
 #nav>div {
 	text-align: right;
 	margin-right: 50px;
@@ -43,11 +42,9 @@ table {
 th, td {
 	border-bottom: 1px solid #444444;
 	padding: 10px;
-	text-align: center;
 }
 </style>
-
-</head>
+	</head>
 	
 	<body class="no-sidebar is-preload">
 	<%
@@ -137,7 +134,7 @@ th, td {
 								<table id = "list">
 									<tr>
 										<td>번호</td>
-										<td width="600px">제목</td>
+										<td>제목</td>
 										<td>작성자</td>
 										<td>시간</td>
 									</tr>
