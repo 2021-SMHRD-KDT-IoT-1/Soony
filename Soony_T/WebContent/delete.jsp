@@ -42,12 +42,12 @@
 										<li><a href="alarm.jsp">방범 알림</a></li>
 									</ul>
 								</li>
-								<li><a href="sidebar.jsp">자유게시판</a></li>
+								<li><a href="boardMain.jsp">자유게시판</a></li>
 								<li>
 									<a href="#">고객 지원</a>
 									<ul>
-										<li><a href="sidebar.jsp">자주 묻는 질문</a></li>
-										<li><a href="sidebar.jsp">QnA</a></li>
+										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
+										<li><a href="qnaMain.jsp">Q&A</a></li>
 									</ul>
 								</li>
 							</ul>

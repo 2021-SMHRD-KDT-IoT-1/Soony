@@ -43,9 +43,9 @@
 								<li>
 									<a href="#">유모차</a>
 									<ul>
-										<li><a href="#">유모차 등록</a></li>
-										<li><a href="#">지문 관리</a></li>
-										<li><a href="#">방범 알림</a></li>
+										<li><a href="stroller.jsp">유모차 등록</a></li>
+										<li><a href="fngView.jsp">지문 관리</a></li>
+										<li><a href="alarm.jsp">방범 알림</a></li>
 									</ul>
 								</li>
 								<li><a href="boardMain.jsp">자유게시판</a></li>
@@ -53,7 +53,7 @@
 									<a href="#">고객 지원</a>
 									<ul>
 										<li><a href="faqMain.jsp">자주 묻는 질문</a></li>
-										<li><a href="anqMain.jsp">QnA</a></li>
+										<li><a href="qnaMain.jsp">Q&A</a></li>
 									</ul>
 								</li>
 							</ul>
