@@ -35,13 +35,14 @@
 /*Å×ÀÌ÷ם css*/
 table {
 	width: 100%;
-	border-top: 1px solid #444444;
+	border-top: 1px solid #f0f4f4;
 	border-collapse: collapse;
 }
 
 th, td {
-	border-bottom: 1px solid #444444;
+	border-bottom: 1px solid #f0f4f4;
 	padding: 10px;
+	text-align: center;
 }
 </style>
 	</head>
