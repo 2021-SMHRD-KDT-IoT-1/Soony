@@ -43,7 +43,7 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+				<div id="header" style="height: 10vh; min-height: 20em;">
 
 					<!-- Inner -->
 						<div class="inner">
