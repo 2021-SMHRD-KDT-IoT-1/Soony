@@ -16,19 +16,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main2.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style type="text/css">
-		#nav > div {
-		text-align : right;
-		margin-right: 50px;
-		margin-bottom: 3px;
-		}
-		#nav > div > button{
-		width: 100px;
-		padding-left: 0px;
-		padding-right: 0px;
-		}
 		
-		</style>
+<style type="text/css">
+#nav>div {
+	text-align: right;
+	margin-right: 50px;
+	margin-bottom: 3px;
+}
+
+#nav>div>button {
+	width: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.tip {
+	vertical-align: middle;
+}
+
+tbody tr:nth-child(2n) {
+	background-color: #f0f4f4;
+}
+
+table {
+	width: 100%;
+	border-top: 1px solid #e1e6e6;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+
+th, td {
+	border-bottom: 1px solid #e1e6e6;
+	padding: 10px;
+}
+</style>
+
 	</head>
 	<body class="homepage is-preload">
 	
@@ -164,77 +186,109 @@
 				<div class="wrapper style2">
 
 					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
 						<header>
-							<h2><a href="#">Sed massa imperdiet magnis</a></h2>
-							<p>
-								Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-								pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
-							</p>
+							<br><br><br><br>
+							<h2><a href="#">유모차 종류</a></h2>
 						</header>
-						<p>
-							Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-							posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-							sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam
-							mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan
-							lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-							consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-							interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-							natoque aenean scelerisque.
-						</p>
-						<footer>
-							<a href="#" class="button">Continue Reading</a>
-						</footer>
+						<a class="image featured"><img src="images/sa.png" alt="" /></a>
+						
+						<header>
+							<br>
+							<h2>유모차 선택 TIP</h2>
+						</header>
+						<table>
+							<tbody>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_1.png">
+										</span>
+									</td>
+									<td class="tip">　바퀴의 크기</td>
+									<td class="tip">　바퀴의 지름이 클수록 장애물을 쉽게 넘을 수 있고 흔들림이 적습니다.</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_2.png">
+										</span>
+									</td>
+									<td class="tip">　서스펜션</td>
+									<td class="tip">　노면의 충격이 아이에게 전달되지 않게 충격을 흡수하는 장치로 승차감과 안정성에 영향을줍니다.</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_3.png">
+										</span>
+									</td>
+									<td class="tip">　양대면</td>
+									<td class="tip">　핸들이나 시트 방향을 전환하여 보호자와 마주볼 수 있는 기능</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_4.png">
+										</span>
+									</td>
+									<td class="tip">　등받이각도</td>
+									<td class="tip">　175도부터 95도까지 아이성장에 따라 조절 가능</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_5.png">
+										</span>
+									</td>
+									<td class="tip">　차양막</td>
+									<td class="tip">　차양막 길이와 단계별 조절이 가능한지 체크</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_6.png">
+										</span>
+									</td>
+									<td class="tip">　장바구니</td>
+									<td class="tip">　크고 튼튼해야 이동시 수납이 편리합니다.</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_7.png">
+										</span>
+									</td>
+									<td class="tip">　트래블시스템</td>
+									<td class="tip">　신생아용 바구니 카시트를 유모차에 장착해서 사용할 수 있는 기능</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_8.png">
+										</span>
+									</td>
+									<td class="tip">　폴딩 or 셀프스탠딩</td>
+									<td class="tip">　유모차를 쉽게 접고 펼수 있는지와 수납 가능한 셀프 스탠딩 여부</td>
+								</tr>
+								<tr>
+									<td scope="row" class="icon">
+										<span class="rounded-circle">
+											<img src="images/ico_tip_9.png">
+										</span>
+									</td>
+									<td class="tip">　가볍고 컴팩트한 사이즈</td>
+									<td class="tip">　엄마가 핸들링하기 편한 무게와 사이즈</td>
+								</tr>
+							</tbody>
+						</table>
+						
 					</article>
-
 				</div>
 
-			<!-- Features -->
-				<div class="wrapper style1">
-
-					<section id="features" class="container special">
-						<header>
-							<h2>Morbi ullamcorper et varius leo lacus</h2>
-							<p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
-						</header>
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Gravida aliquam penatibus</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-						</div>
-					</section>
-							<!-- top버튼 -->
-							<a id="toTop" href="#top">
-						 		<img src="images/top.png" width="60px" height="50px" alt="" >
-							</a>
-				</div>
+				<!-- top버튼 -->
+				<a id="toTop" href="#top">
+					<img src="images/top.png" width="60px" height="50px" alt="" >
+				</a>
 
 					<!-- Footer -->
 				<div id="footer">
