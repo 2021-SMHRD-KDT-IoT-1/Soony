@@ -104,9 +104,12 @@
 
 					<article id="main" class="container special">
 						<header>
-							<br><br><br><h2><a href="#">유모차 등록</a></h2>
+							<br><br><br><h2><a href="#">유모차 등록</a></h2><br>
 						</header>
-						
+						<div align="center">
+						<img src="./images/stroller1.png"><br>
+						<img src="./images/stroller2.jpg">
+						</div>
 						<section id="logmain">
 						<div style="width:500px; margin:auto" align="center">
 						<form action="StrollerCon" method="post">
