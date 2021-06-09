@@ -124,13 +124,13 @@
 								<table id = "list">
 									<tr>
 										<td style="text-align: center;"><h3>锅龋</h3></td>
-										<td><h3>&nbsp;&nbsp;力格</h3><br><br></td>
+										<td><h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;力格</h3><br><br></td>
 									</tr>
 									
 									<%for(int i=0; i<list.size();i++){ %>
 										<tr>
 											<td style="text-align: center;"> <h3><%=i+1 %></h3> </td>
-											<td><a href="faqView.jsp?f_num=<%= list.get(i).getNum() %>"><p style="font-size: 40px;"><%=list.get(i).getTitle()%></p></a></td>
+											<td><a href="faqView.jsp?f_num=<%= list.get(i).getNum() %>"><p style="font-size: 30px; text-align: left;"><%=list.get(i).getTitle()%></p></a></td>
 										</tr>
 									<%} %>	
 									

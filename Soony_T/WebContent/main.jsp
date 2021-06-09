@@ -105,10 +105,9 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Hi. You're looking at <strong>Helios</strong>.</h2>
+						<h2>편안함과 안전을 추구하는<strong>콩순이 유모차</strong>입니다.</h2>
 						<p>
-							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
-							Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
+							콩순이 유모차는 언제나, 어디서나 귀하의 가정에서 소중한 아이와 <br>안전하고 편안한 추억을 만들기 위해서 힘쓰겠습니다.
 						</p>
 					</header>
 				</section>

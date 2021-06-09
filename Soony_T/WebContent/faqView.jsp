@@ -33,7 +33,14 @@
 		padding-left: 0px;
 		padding-right: 0px;
 		}
-		
+		.title {
+    font-size: 22px;
+    padding: 20px;
+    background-color: #EDEDED;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid #F2F5F3;
+}
 		</style>
 	</head>
 	<%
@@ -121,34 +128,23 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">FAQ</a></h2>
+								<h2><a href="#">FAQ</a></h2><br>
 								
 							</header>
 							
 							<!-- QnAView틀 시작-->
-							<div id = "board">
-								<table id="list">
-									<tr>
-										<td>제목</td>
-										<td><%= bdto.getTitle() %></td>
-									</tr>
-									<tr>
-										<td>작성자</td>
-										<td><%= dto.getNick() %></td>
-									</tr>
-									<tr>
-										<td colspan="2">내용</td>
-									</tr>
-									<tr>
-										<td colspan="2"><br>
-									
+							<div class="title">
+										<%= bdto.getTitle() %>
+									</div>
+										<div class="title">
+										<h1>작성자 : 관리자</h1>
+									</div>
+									<br><br>
+										<div class="title">
 										<%= bdto.getContent() %>
-										<br><br><br>
-										</td>
-										
-									</tr>
-									<tr>
-										<td colspan="2">
+										</div>
+									<br><br>
+										<div align="center">
 										<%if(dto.getId().equals("admin")) {%>
 										<a href="faqMain.jsp"><button>뒤로가기</button></a>
 										<a href="faqUpdate.jsp?f_num=<%= bdto.getNum() %>"><button>수정하기</button></a>
@@ -156,10 +152,8 @@
 										<%} else{ %>
 										<a href="faqMain.jsp"><button>뒤로가기</button></a>
 										<%} %>
-										</td>
-									</tr>
-								</table>
-							</div>
+										</div>
+										<br><br>
 							<!-- QnAview틀 끝 -->
 						</article>
 						<hr />

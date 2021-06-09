@@ -42,6 +42,14 @@
 		text-align: center; 
 		height: 30px;
 		}
+		.title {
+    font-size: 22px;
+    padding: 20px;
+    background-color: #EDEDED;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid #F2F5F3;
+}
 		</style>
 	</head>
 	<%
@@ -139,33 +147,20 @@
 							</header>
 							
 							<!-- QnAView틀 시작-->
-							<div id = "board">
-								<table id="list">
-									<tr>
-										<td>제목</td>
-										<td><%= bdto.getTitle() %></td>
-									</tr>
-									<tr>
-										<td>작성자</td>
-										<td><%= bdto.getUsername() %></td>
-									</tr>
-									<tr>
-										<td colspan="2">내용</td>
-									</tr>
-									<tr>
-										<td colspan="2"><img src="uploadFreeboard/<%= bdto.getPhoto() %>"><br>
-									
-										<%= bdto.getContent() %></td>
+							<div class="title">
+										<h1><%= bdto.getTitle() %></h1>
+								</div>
+								<div class="title">
+										<h1>작성자 : <%= bdto.getUsername() %></h1>
+									</div>
 										
-									</tr>
-									<!--
-									<tr>
-									<td colspan="1"><input id= "yes" type="button" value="좋아요♥" onclick="like()"></td>
-									<td id="like_result">좋아요 : <%=bdto.getLike() %></td>
-								 	</tr>
-									-->
-									<tr>
-										<td colspan="2">
+									<br><br>
+								<div align="center">
+										<img src="uploadFreeboard/<%= bdto.getPhoto() %>"><br>
+										<%= bdto.getContent() %>
+										</div>
+									<br><br>
+										<div align="center">
 										<%if(dto.getNick().equals(bdto.getUsername())) {%>
 										<a href="boardMain.jsp"><button>뒤로가기</button></a>
 										<a href="boardUpdate.jsp?b_num=<%= bdto.getNum() %>"><button>수정하기</button></a>
@@ -173,10 +168,9 @@
 										<%} else{ %>
 										<a href="boardMain.jsp"><button>뒤로가기</button></a>
 										<%} %>
-										</td>
-									</tr>
-								</table>
-								<br>
+										</div>
+								<br><br>
+								
 								<table>
 								
 								<tr>
