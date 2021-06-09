@@ -35,13 +35,14 @@
 /*테이블 css*/
 table {
 	width: 100%;
-	border-top: 1px solid #444444;
+	border-top: 1px solid #f0f4f4;
 	border-collapse: collapse;
 }
 
 th, td {
-	border-bottom: 1px solid #444444;
+	border-bottom: 1px solid #f0f4f4;
 	padding: 10px;
+	text-align: center;
 }
 </style>
 	</head>
@@ -132,9 +133,9 @@ th, td {
 							<!-- QnA틀 -->
 							<div id="board">
 								<table id = "list">
-									<tr>
+									<tr bgcolor = "#f0f4f4">
 										<td>번호</td>
-										<td>제목</td>
+										<td width = "55%">제목</td>
 										<td>작성자</td>
 										<td>시간</td>
 									</tr>
@@ -148,9 +149,14 @@ th, td {
 										</tr>
 									<%} %>	
 								</table>
-								
+								<table >
+								<tr >
+										<td align="right">
 								<a href="main.jsp"><button id="writer">홈으로가기</button></a>
 								<a href="boardWrite.jsp"><button id="writer">작성하러가기</button></a>
+								</td>
+										</tr>
+									</table>
 							</div>
 							<!-- QnA틀 끝 -->
 						</article>
