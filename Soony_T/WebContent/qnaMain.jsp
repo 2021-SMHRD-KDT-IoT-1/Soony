@@ -33,12 +33,12 @@
 /*테이블 css*/
 table {
 	width: 100%;
-	border-top: 1px solid #eeeeee;
+	border-top: 1px solid #f0f4f4;
 	border-collapse: collapse;
 }
 
 th, td {
-	border-bottom: 1px solid #eeeeee;
+	border-bottom: 1px solid #f0f4f4;
 	padding: 10px;
 	text-align: center;
 }
@@ -134,7 +134,7 @@ th, td {
 							<!-- QnA틀 -->
 							<div id="board">
 								<table id = "list">
-									<tr bgcolor = "#eeeeee">
+									<tr bgcolor = "#f0f4f4">
 										<td>번호</td>
 										<td width = "55%">제목</td>
 										<td>작성자</td>
