@@ -19,20 +19,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/qna.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<style type="text/css">
-		#nav > div {
-		text-align : right;
-		margin-right: 50px;
-		margin-bottom: 3px;
-		}
-		#nav > div > button{
-		width: 100px;
-		padding-left: 0px;
-		padding-right: 0px;
-		}
-		
-		</style>
-	</head>
+
+<style type="text/css">
+#nav>div {
+	text-align: right;
+	margin-right: 50px;
+	margin-bottom: 3px;
+}
+
+#nav>div>button {
+	width: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+/*테이블 css*/
+table {
+	width: 100%;
+	border-top: 1px solid #444444;
+	border-collapse: collapse;
+}
+
+th, td {
+	border-bottom: 1px solid #444444;
+	padding: 10px;
+	text-align: center;
+}
+</style>
+
+</head>
 	
 	<body class="no-sidebar is-preload">
 	<%
@@ -122,7 +137,7 @@
 								<table id = "list">
 									<tr>
 										<td>번호</td>
-										<td>제목</td>
+										<td width="600px">제목</td>
 										<td>작성자</td>
 										<td>시간</td>
 									</tr>
