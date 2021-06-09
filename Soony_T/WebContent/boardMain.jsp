@@ -127,7 +127,7 @@ th, td {
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">자유게시판</a></h2>
+								<h2><a href="#">자유게시판</a></h2><br><br>
 							</header>
 							
 							<!-- QnA틀 -->

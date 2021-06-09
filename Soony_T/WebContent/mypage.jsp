@@ -27,6 +27,11 @@
 		padding-left: 0px;
 		padding-right: 0px;
 		}
+		th, td {
+	border-bottom: 1px solid #f0f4f4;
+	padding: 10px;
+	text-align: center;
+}
 		
 		</style>
 	</head>
@@ -177,7 +182,12 @@
 							</a>
 
 				</div>
-
+<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						
+						<div class="row">
+							<div class="col-12">
 			
 			
 								<!-- Contact -->
