@@ -150,12 +150,14 @@ th, td {
 										</tr>
 									<%} %>	
 								</table>
+								<table >
 								<tr >
 										<td align="right">
 											<a href="main.jsp"><button id="writer">홈으로가기</button></a> 
-											<a href="qnaWrite.jsp"><button id="writer">작성하러가기</button></a>
+											<a href="qnaWrite.jsp"><button id="writer">작성하기</button></a>
 										</td>
 										</tr>
+									</table>
 								
 								
 								
