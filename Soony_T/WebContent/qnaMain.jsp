@@ -33,7 +33,7 @@
 /*테이블 css*/
 table {
 	width: 100%;
-	border-top: 1px solid #f0f4f4;
+	border-top: 1px solid #d7d89f;
 	border-collapse: collapse;
 }
 
@@ -73,7 +73,7 @@ th, td {
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
+								<h1><a href="main.jsp" id="logo"><img src="images/qnaLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 
@@ -134,7 +134,7 @@ th, td {
 							<!-- QnA틀 -->
 							<div id="board">
 								<table id = "list">
-									<tr bgcolor = "#f0f4f4">
+									<tr bgcolor = "#f2f2db">
 										<td>번호</td>
 										<td width = "55%">제목</td>
 										<td>작성자</td>

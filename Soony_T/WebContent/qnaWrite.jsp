@@ -48,7 +48,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
+								<h1><a href="main.jsp" id="logo"><img src="images/qnaLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 

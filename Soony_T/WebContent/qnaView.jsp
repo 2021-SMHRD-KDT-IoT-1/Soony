@@ -38,7 +38,7 @@
 .title {
     font-size: 22px;
     padding: 20px;
-    background-color: #EDEDED;
+    background-color: #f2f2db;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 2px solid #F2F5F3;
@@ -81,7 +81,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
+								<h1><a href="main.jsp" id="logo"><img src="images/qnaLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 

@@ -52,7 +52,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
+								<h1><a href="main.jsp" id="logo"><img src="images/qnaLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 
@@ -106,8 +106,7 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
-								<h2><a href="#">자유게시판 작성하기</a></h2>
-								
+								<h2><a href="#">Q&A 작성하기</a></h2>
 							</header>
 							
 							<div id = "board">
@@ -135,7 +134,7 @@
 					            	 <br><br>
 					               		<input type="reset" class="button" width=65 value="초기화" >
 					                	<input type="submit" class="button" value="수정완료" >
-					                	<a href="boardMain.jsp"><input type="button" class="button" value="목록" ></a> 
+					                	<a href="qnaMain.jsp"><input type="button" class="button" value="목록" ></a> 
 								</div>
 								</form>
 							</div>
