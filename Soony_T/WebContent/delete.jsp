@@ -23,7 +23,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="boardMain.jsp" id="logo"><img src="images/loginLogo.png" alt="" /></a></h1>
+								<h1><a href="boardMain.jsp" id="logo"><img src="images/deleteLogo.png" alt="" /></a></h1>
 							</header>
 							
 						</div>
