@@ -12,7 +12,7 @@
 		<title>SoonyCong FAQ</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/qna.css" />
+		<link rel="stylesheet" href="assets/css/faq.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<style type="text/css">
 		#nav > div {
@@ -48,7 +48,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
+								<h1><a href="main.jsp" id="logo"><img src="images/faqLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 

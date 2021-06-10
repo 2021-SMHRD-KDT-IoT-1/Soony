@@ -73,7 +73,7 @@ th, td {
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo"><img src="images/boardLogo.png" alt="" /></a></h1>
+								<h1><a href="boardMain.jsp" id="logo"><img src="images/boardLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 
@@ -126,10 +126,6 @@ th, td {
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">자유게시판</a></h2><br><br>
-							</header>
-							
 							<!-- QnA틀 -->
 							<div id="board">
 								<table id = "list">

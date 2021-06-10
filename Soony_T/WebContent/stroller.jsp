@@ -47,7 +47,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo"><img src="images/genuine.png" alt="" /></a></h1>
+								<h1><a href="stroller.jsp" id="logo"><img src="images/genuine.png" alt="" /></a></h1>
 							</header>
 						
 						</div>

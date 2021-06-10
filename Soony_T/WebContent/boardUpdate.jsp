@@ -52,7 +52,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo"><img src="images/boardLogo.png" alt="" /></a></h1>
+								<h1><a href="boardMain.jsp" id="logo"><img src="images/boardLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 
@@ -105,11 +105,6 @@
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">자유게시판 작성하기</a></h2>
-								
-							</header>
-							
 							<div id = "board">
 								<form action="BoardUpdateCon?b_num=<%= b_num %>" method="post" enctype="multipart/form-data">
 								<table width="700" border="3" bordercolor="lightgray" align="center">

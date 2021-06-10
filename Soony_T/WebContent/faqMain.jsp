@@ -17,24 +17,38 @@
 		<title>SoonyCong FAQ</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/qna.css" />
+		<link rel="stylesheet" href="assets/css/faq.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<style type="text/css">
-		#nav > div {
-		text-align : right;
-		margin-right: 50px;
-		margin-bottom: 3px;
-		}
-		#nav > div > button{
-		width: 100px;
-		padding-left: 0px;
-		padding-right: 0px;
-		}
-		#list > tr > td {
-	text-align: center;
+		
+<style type="text/css">
+#nav>div {
+	text-align: right;
+	margin-right: 50px;
+	margin-bottom: 3px;
 }
-		</style>
-	</head>
+
+#nav>div>button {
+	width: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+/*테이블 css*/
+table {
+	width: 100%;
+	border-top: 1px solid #d7d89f;
+	border-collapse: collapse;
+}
+
+th, td {
+	border-bottom: 1px solid #f0f4f4;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+</style>
+
+</head>
 	
 	<body class="no-sidebar is-preload">
 	<%
@@ -62,7 +76,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
+								<h1><a href="main.jsp" id="logo"><img src="images/faqLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 
@@ -119,30 +133,38 @@
 								<h2><a href="#">FAQ</a></h2><hr>
 							</header>
 							
-							<!-- QnA틀 -->
-							<div id="board">
+							<!-- FAQ틀 -->
+							
+								<div id="board">
 								<table id = "list">
-									<tr>
-										<td style="text-align: center;"><h3>번호</h3></td>
-										<td><h3>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;제목</h3><br><br></td>
+									<tr bgcolor = "#f2f2db">
+										<td style="font-size: 28px"><b>번호</b></td>
+										<td width = "85%" style="font-size: 28px"><b>제목</b></td>
 									</tr>
-									
 									<%for(int i=0; i<list.size();i++){ %>
 										<tr>
-											<td style="text-align: center;"> <h3><%=list.get(i).getNum() %></h3> </td>
-											<td><a href="faqView.jsp?f_num=<%= list.get(i).getNum() %>"><p style="font-size: 30px; text-align: left;"><%=list.get(i).getTitle()%></p></a></td>
+											<td style="text-align: center; font-size: 27px;"> <%=list.get(i).getNum() %> </td>
+											<td style="vertical-align: middle; font-size: 27px; text-align: left;">
+											<a href="faqView.jsp?f_num=<%= list.get(i).getNum() %>"> <%=list.get(i).getTitle()%></a>
+											</td>
 										</tr>
 									<%} %>	
-									
 								</table>
-								<%if(dto.getId().equals("admin")) {%>
-								<a href="main.jsp"><button id="writer">홈으로가기</button></a>
-								<a href="faqWrite.jsp"><button id="writer">작성하러가기</button></a>
-								<%}else{ %>
-								<a href="main.jsp"><button id="writer">홈으로가기</button></a>
-								<%} %>
+								
+								<table>
+									<tr>
+										<td align="right">
+											<%if(dto.getId().equals("admin")) {%>
+												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
+												<a href="faqWrite.jsp"><button id="writer">작성하러가기</button></a>
+											<%}else{ %>
+												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
+											<%} %>
+										</td>
+									</tr>
+								</table>
 							</div>
-							<!-- QnA틀 끝 -->
+							<!-- FAQ틀 끝 -->
 						</article>
 						
 					</div>

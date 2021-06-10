@@ -73,7 +73,7 @@ th, td {
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo"><img src="images/qnaLogo.png" alt="" /></a></h1>
+								<h1><a href="qnaMain.jsp" id="logo"><img src="images/qnaLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 
@@ -126,10 +126,7 @@ th, td {
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">Q&A</a></h2><br><br>
-								
-							</header>
+					
 							
 							<!-- QnAÆ² -->
 							<div id="board">
@@ -158,10 +155,6 @@ th, td {
 										</td>
 										</tr>
 									</table>
-								
-								
-								
-							
 									</div>
 							<!-- QnAÆ² ³¡ -->
 						</article>

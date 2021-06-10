@@ -88,7 +88,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo"><img src="images/boardLogo.png" alt="" /></a></h1>
+								<h1><a href="boardMain.jsp" id="logo"><img src="images/boardLogo.png" alt="" /></a></h1>
 							</header>
 						</div>
 
@@ -141,11 +141,7 @@
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">자유게시판</a></h2>
-								
-							</header>
-							
+						
 							<!-- QnAView틀 시작-->
 							<div class="title">
 										<h1><%= bdto.getTitle() %></h1>
