@@ -42,6 +42,8 @@ b_view NUMBER(10),
 b_like NUMBER(10),
 b_photo VARCHAR2(100));
 
+insert into f_brd values(b_num.nextval,'고양이','유모차가 정말 좋아요!','역시 유모차는 SoonyCong이네요 너무 편리한거 같아요 ㅎㅎㅎㅎ',sysdate,'0','0',null);
+
 create sequence b_num 
 start with 1 
 increment by 1;
