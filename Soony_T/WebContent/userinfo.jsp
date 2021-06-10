@@ -88,12 +88,14 @@
 						</tr>
 						<%for(int i = 0; i<list.size(); i++){ %>
 								<tr>
+								<%if(!list.get(i).getId().equals("admin")){ %>
 									<td><%=list.get(i).getId() %></td>
 									<td><%=list.get(i).getPw() %></td>
 									<td><%=list.get(i).getName() %></td>							
 									<td><%=list.get(i).getTel() %></td>							
 									<td><%=list.get(i).getEmail() %></td>							
-									<td><%=list.get(i).getNick() %></td>							
+									<td><%=list.get(i).getNick() %></td>	
+									<%} %>						
 								</tr>
 							<%} %>
 						
@@ -115,6 +117,13 @@
 
 			
 			
+								<!-- Contact -->
+									<div id="footer">
+					<div class="container">
+						
+						<div class="row">
+							<div class="col-12">
+
 								<!-- Contact -->
 									<section class="contact">
 										<header>
