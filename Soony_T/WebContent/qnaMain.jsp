@@ -73,7 +73,7 @@ th, td {
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
+								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
 							</header>
 						</div>
 
@@ -143,7 +143,7 @@ th, td {
 									
 									<%for(int i=0; i<list.size();i++){ %>
 										<tr>
-											<td> <%=i+1 %> </td>
+											<td> <%=list.get(i).getQ_num() %> </td>
 											<td> <a href="qnaView.jsp?q_num=<%= list.get(i).getQ_num() %>"><%=list.get(i).getQ_title() %> </a></td>
 											<td> <%=list.get(i).getQ_username() %> </td>
 											<td> <%=list.get(i).getDate() %> </td>

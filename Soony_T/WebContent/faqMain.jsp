@@ -62,7 +62,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
+								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
 							</header>
 						</div>
 
@@ -129,7 +129,7 @@
 									
 									<%for(int i=0; i<list.size();i++){ %>
 										<tr>
-											<td style="text-align: center;"> <h3><%=i+1 %></h3> </td>
+											<td style="text-align: center;"> <h3><%=list.get(i).getNum() %></h3> </td>
 											<td><a href="faqView.jsp?f_num=<%= list.get(i).getNum() %>"><p style="font-size: 30px; text-align: left;"><%=list.get(i).getTitle()%></p></a></td>
 										</tr>
 									<%} %>	
