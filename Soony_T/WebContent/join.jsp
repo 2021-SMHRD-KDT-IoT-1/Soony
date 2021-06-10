@@ -29,9 +29,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">SoonyCong</a></h1>
-								<hr />
-								<p>소중한 순간을 더욱 편하고 안전하게</p>
+								<h1><a href="boardMain.jsp" id="logo"><img src="images/joinLogo.png" alt="" /></a></h1>
 							</header>
 							
 						</div>
