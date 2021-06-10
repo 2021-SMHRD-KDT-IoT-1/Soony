@@ -12,7 +12,7 @@
 		<title>SoonyCong 유모차등록</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/login.css" />
+		<link rel="stylesheet" href="assets/css/stroller.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 <style type="text/css">
@@ -47,9 +47,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="main.jsp" id="logo">콩순이 유모차</a></h1>
-								<hr />
-								<p>소중한 순간을 더욱 편하고 안전하게</p>
+								<h1><a href="main.jsp" id="logo"><img src="images/genuine.png" alt="" /></a></h1>
 							</header>
 						
 						</div>
