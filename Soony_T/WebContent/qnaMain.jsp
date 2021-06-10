@@ -144,7 +144,7 @@ th, td {
 									<%for(int i=0; i<list.size();i++){ %>
 										<tr>
 											<td> <%=list.get(i).getQ_num() %> </td>
-											<td> <a href="qnaView.jsp?q_num=<%= list.get(i).getQ_num() %>"><%=list.get(i).getQ_title() %> </a></td>
+											<td style="text-align: left;"> <a href="qnaView.jsp?q_num=<%= list.get(i).getQ_num() %>"><%=list.get(i).getQ_title() %> </a></td>
 											<td> <%=list.get(i).getQ_username() %> </td>
 											<td> <%=list.get(i).getDate() %> </td>
 										</tr>

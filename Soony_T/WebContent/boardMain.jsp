@@ -143,7 +143,7 @@ th, td {
 									<%for(int i=0; i<list.size();i++){ %>
 										<tr>
 											<td> <%=list.get(i).getNum() %> </td>
-											<td> <a href="boardView.jsp?b_num=<%= list.get(i).getNum() %>"><%=list.get(i).getTitle() %> </a></td>
+											<td style="text-align: left;"> <a href="boardView.jsp?b_num=<%= list.get(i).getNum() %>"><%=list.get(i).getTitle() %> </a></td>
 											<td> <%=list.get(i).getUsername() %> </td>
 											<td> <%=list.get(i).getDate() %> </td>
 										</tr>
