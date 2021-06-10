@@ -127,10 +127,6 @@
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">FAQ</a></h2><br>
-								
-							</header>
 							
 							<!-- QnAViewÆ² ½ÃÀÛ-->
 							<div class="title">

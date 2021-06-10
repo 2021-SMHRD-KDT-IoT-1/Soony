@@ -129,9 +129,6 @@ th, td {
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">FAQ</a></h2><hr>
-							</header>
 							
 							<!-- FAQƲ -->
 							

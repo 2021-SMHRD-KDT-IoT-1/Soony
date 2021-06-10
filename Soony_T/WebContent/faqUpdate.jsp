@@ -105,10 +105,6 @@
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">자유게시판 작성하기</a></h2>
-								
-							</header>
 							
 							<div id = "board">
 								<form action="FAQUpdateCon?f_num=<%= f_num %>" method="post" >

@@ -101,10 +101,6 @@
 
 					<div class="container">
 						<article id="main" class="special">
-							<header>
-								<h2><a href="#">FAQ 작성하기</a></h2>
-								
-							</header>
 							
 							<div id = "board">
 								<form action="FAQWriteCon" method="post">
