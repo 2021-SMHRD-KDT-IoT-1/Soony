@@ -77,7 +77,7 @@ th, td {
 								<p>소중한 순간을 더욱 편하고 안전하게</p>
 							</header>
 							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
+								<a href="#banner" class="button circled scrolly">둘러보기</a>
 							</footer>
 						</div>
 
